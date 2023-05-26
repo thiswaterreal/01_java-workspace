@@ -9,6 +9,9 @@ public class Run {
 
 	public static void main(String[] args) {
 		
+		// 클래서명 별칭 = new 클래스명();
+		// 별칭.메소드();
+		
 		VariablePractice1 v1 = new VariablePractice1();
 		// v1.practice1();
 		

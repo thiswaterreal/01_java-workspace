@@ -6,6 +6,11 @@ public class VariablePractice1 {
 
 	public void practice1() {
 		
+		// 1. 스캐너 생성
+		// 2. 가이드 문구 출력 & 입력받기
+		// 3. 콘솔 출력
+		// 4. 스캐너 반납
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("이름을 입력하세요 : ");

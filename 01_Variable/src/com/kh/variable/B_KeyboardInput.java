@@ -42,11 +42,11 @@ public class B_KeyboardInput {
 		String name = sc.nextLine();
 		
 		// 사용자가 입력한 값을 문자열로 받아오는 메소드 (nextLine(), next())
-		// String name = sc.next();   
-		// next() : 사용자가 입력한 값 중 공백이 있을 경우 공백 이전까지의 값만 읽어옴
-		//			따라서 주소지처럼 공백이 있는 데이터는 제대로 된 값을 못가져 올 수도 있음
-		// String name = sc.nextLine();
-		// nextLine() : 사용자가 입력한 값 모두 읽어옴 (엔터 전 까지의 모든 값)
+		// 1. String name = sc.next();   
+		//    next() : 사용자가 입력한 값 중 공백이 있을 경우 공백 이전까지의 값만 읽어옴
+		//			   따라서 주소지처럼 공백이 있는 데이터는 제대로 된 값을 못가져 올 수도 있음
+		// 2. String name = sc.nextLine();
+		//    nextLine() : 사용자가 입력한 값 모두 읽어옴 (엔터 전 까지의 모든 값)
 		
 		System.out.print("당신의 나이는 몇 살입니까? ");
 		int age = sc.nextInt(); // 사용자가 입력한 값을 정수로 읽어들이는 메소드
@@ -82,7 +82,9 @@ public class B_KeyboardInput {
 		double height = sc.nextDouble();
 		
 		// xxx님은 xx살이며, 사는 곳은 xxx이고, 키는 xxx.x cm 입니다.
-		System.out.println(name + "님은 " + age + "살이며, 사는 곳은 " + address + "이고, 키는 " + height + "cm 입니다");		
+		System.out.println(name + "님은 " + age + "살이며, 사는 곳은 " + address + "이고, 키는 " + height + " cm 입니다.");		
+		
+		System.out.printf("%s님은 %d살이며, 사는 곳은 %s이고, 키는 %.1f cm 입니다.", name, age, address, height);
 		
 		sc.close();
 	}
