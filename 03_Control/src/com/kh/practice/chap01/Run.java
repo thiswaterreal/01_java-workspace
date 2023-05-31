@@ -1,4 +1,4 @@
-package com.kh.chap01;
+package com.kh.practice.chap01;
 
 public class Run {
 
@@ -14,7 +14,7 @@ public class Run {
 		//c.practice7();
 		//c.practice8();
 		//c.practice9();
-		//c.practice10();
+		c.practice10();
 		
 	}
 	
