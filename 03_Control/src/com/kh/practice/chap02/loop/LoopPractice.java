@@ -119,7 +119,7 @@ public class LoopPractice {
 					System.out.print(i + " ");
 				}	
 			}else { //(num1>num2)
-				for(int i=num2; i<=num1; i++) {		// (반대로 입력해도 되도록)
+				for(int i=num2; i<=num1; i++) {		// (반대로 입력해도 되도록) 
 					System.out.print(i + " ");
 				}	
 			}
@@ -269,8 +269,6 @@ public class LoopPractice {
 			System.out.print("정수2 : ");
 			int num2 = sc.nextInt();
 			
-			
-				
 				
 				if(op.equals("/") && num2 == 0) {								//문자열 비교이기때문에 .equals 로 비교
 					System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
