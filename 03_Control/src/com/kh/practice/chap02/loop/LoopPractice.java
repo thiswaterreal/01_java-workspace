@@ -40,7 +40,7 @@ public class LoopPractice {
 		
 	}
 	
-	public void practice3() {										// 다쉬!!생각!!
+	public void practice3() {						// (다쉬생각)
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -49,7 +49,7 @@ public class LoopPractice {
 		
 		if(num >= 1) {
 			
-			for(int i=num; i>=1; i--) {
+			for(int i=num; i>=1; i--) {				// 거꾸로 출력 i--
 				System.out.print(i + " ");
 			}
 			
@@ -60,17 +60,17 @@ public class LoopPractice {
 	}
 	
 	
-	public void practice4() {
+	public void practice4() {						// (다쉬생각)
 		
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {
+		while(true) {								// 다시 입력받도록
 			System.out.print("1이상의 숫자를 입력하세요 : ");
 			int num = sc.nextInt();
 			
 			if(num >= 1) {
 				
-				for(int i=num; i>=1; i--) {
+				for(int i=num; i>=1; i--) {			// 거꾸로 출력
 					System.out.print(i + " ");
 				}
 				break;
@@ -90,11 +90,11 @@ public class LoopPractice {
 		System.out.print("정수를 하나 입력하세요 : ");
 		int num = sc.nextInt();
 		
-		int sum = 0;
+		int sum = 0; 		// 변수 상자 만들고~
 		
 		int i = 1;
 		while(i<=num) {
-			sum += i;
+			sum += i;		// 누적합
 			i++;
 		}
 		
@@ -102,7 +102,7 @@ public class LoopPractice {
 		
 	}
 	
-	public void practice6() {					// 다쉬!!!!!생각!!
+	public void practice6() {						// (다쉬생각)
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -115,11 +115,11 @@ public class LoopPractice {
 		if(num1 > 0 && num2 > 0) {
 			
 			if(num1<num2) {
-				for(int i=num1; i<=num2; i++) {
+				for(int i=num1; i<=num2; i++) {		// 입력받은 두값의 사이값 출력
 					System.out.print(i + " ");
 				}	
-			}else {
-				for(int i=num2; i<=num1; i++) {
+			}else { //(num1>num2)
+				for(int i=num2; i<=num1; i++) {		// (반대로 입력해도 되도록)
 					System.out.print(i + " ");
 				}	
 			}
