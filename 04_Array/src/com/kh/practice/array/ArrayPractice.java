@@ -181,6 +181,7 @@ public class ArrayPractice {
 			
 		System.out.print("정수 : ");
 		int num = sc.nextInt();
+		System.out.println(num);
 		
 		
 	}	
