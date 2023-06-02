@@ -71,11 +71,11 @@ public class CompExample {
 		char ch = sc.nextLine().charAt(0);
 		
 		
-		int count = 0;
+		int count = 0; 							// count 변수 만들기
 		 
 		for (int i=0; i<str.length(); i++) {
 		    if (str.charAt(i) == ch) {
-		        count++;
+		        count++;						// count++;
 		    }
 		}
 		

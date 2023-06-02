@@ -12,10 +12,10 @@ public class Run {
 		//c.practice1();
 		//c.practice2();
 		//c.practice3();
-		//c.practice4();
+		c.practice4();
 		
 		UpAndDown u = new UpAndDown();
-		u.upDown();
+		//u.upDown();
 		
 		RockPaperScissors r = new RockPaperScissors();
 		//r.rps();

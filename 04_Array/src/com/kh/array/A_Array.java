@@ -98,7 +98,7 @@ public class A_Array {
 		// 배열의 장점 : 출력시 반복문 활용 가능
 		// 위 출력을 한번에
 		for(int i=0; i<=4; i++) {
-			System.out.println(arr[i]);
+			System.out.println(arr[i]); // 0 1 2 3 4
 		}
 		
 		System.out.println(arr); // 실제 arr 이라는 박스에는 '주소값' 이라는게 담겨 있음 (뭔소리지? => method2())
@@ -111,10 +111,10 @@ public class A_Array {
 		
 		// 배열 선언과 동시에 할당
 		int[] iArr = new int[5];
-		System.out.println(iArr);
+		System.out.println(iArr);	// [I@6f2b958e
 		
 		double[] dArr = new double[3];
-		System.out.println(dArr);
+		System.out.println(dArr);   // [D@5e91993f 걍 주소값 나옴
 		
 		/*
 		 * 실제 리터럴(값)을 곧바로 담을 수 있는 변수를 '일반변수' 라고 얘기하고
@@ -212,7 +212,7 @@ public class A_Array {
 	
 	public void method6() {
 		
-		int[] arr = new int[5];
+		int[] arr = new int[5];		// *방 5개 선언!!
 		
 		// 값대입
 		/*
@@ -238,8 +238,8 @@ public class A_Array {
 		*/
 		
 		// 값출력
-		for(int i=0; i<arr.length; i++) {
-			System.out.println(arr[i]);
+		for(int i=0; i<arr.length; i++) {	// (0~4번 인덱스)
+			System.out.println(arr[i]);		// 2 4 6 8 10
 		}
 		
 		System.out.println("arr의 해쉬코드값 : " + arr.hashCode());

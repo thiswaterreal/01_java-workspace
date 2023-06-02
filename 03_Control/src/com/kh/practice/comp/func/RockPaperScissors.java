@@ -19,9 +19,9 @@ public class RockPaperScissors {
 		String name = sc.nextLine();
 		
 		System.out.print("가위바위보 : ");
-		String user = sc.nextLine();	// 내가 낸 가바보를 user에 저장
+		String user = sc.nextLine();			// 내가 낸 가바보를 user에 저장
 		
-		int com = (int)(Math.random()* 3 + 1); // 컴퓨터가 낸 랜덤 가바보를 com에 저장
+		int com = (int)(Math.random()* 3 + 1);  // 컴퓨터가 낸 랜덤 가바보를 com에 저장
 		
 		
 		if(user.equals("exit")) {
