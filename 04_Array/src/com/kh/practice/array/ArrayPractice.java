@@ -85,6 +85,33 @@ public class ArrayPractice {
 		System.out.print("문자 : ");
 		char ch = sc.nextLine().charAt(0);
 		
+		int count = 0;
+		
+		char[] arr = new char[str.length()];
+		for(int i=0; i<arr.length; i++) {
+			arr[i] = str.charAt(i);
+		}
+		
+		System.out.print(str + "에 " + ch + "가 존재하는 위치(인덱스) : ");
+		
+		for(int i=0; i<str.length(); i++) {
+			if(ch == arr[i]) {
+				count++;
+				System.out.println(i + " ");
+			}
+		}
+		System.out.println(); //개행
+		System.out.println(ch + "의 개수 : " + count);
+		
+		
+		/*
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		System.out.print("문자 : ");
+		char ch = sc.nextLine().charAt(0);
 		
 		// 존재하는 위치(인덱스)
 		System.out.print(str + "에 " + ch + "가 존재하는 위치(인덱스) : ");
@@ -108,6 +135,8 @@ public class ArrayPractice {
 			
 		}
 		System.out.println(ch + "의 개수 : " + count);
+		*/
+		
 	}
 	
 	public void practice6() {
@@ -126,8 +155,9 @@ public class ArrayPractice {
 		
 	}
 	
-	public void practice7() {			// 다시
+	public void practice7() {			// 다시생각!!!!!!!!
 		
+		// 사용자가 배열의 길이를 직접 입력하여 그 값만큼 정수 배열을 선언 및 할당
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("정수 : ");
@@ -135,13 +165,22 @@ public class ArrayPractice {
 		
 		int[] arr = new int[num];
 		
+		int sum = 0;
+		
+		// 배열 크기만큼 사용자가 직접 값을 입력하여 각각의 인덱스에 값을 초기화
 		for(int i=0; i<arr.length; i++) {
-			//arr[i] = num;
+			System.out.print("배열 " + i + "번째 인덱스에 넣을 값 : ");
+			arr[i] = sc.nextInt();
+			sum += arr[i];
 		}
 		
+		// 그리고 배열 전체 값을 나열하고 각 인덱스에 저장된 값들의 합을 출력
 		for(int i=0; i<arr.length; i++) {
-			System.out.println("배열 " + i + "번째 인덱스에 넣을 값 : " + num);
+			System.out.print(arr[i] + " ");
 		}
+		System.out.println(); //개행
+		System.out.println("총 합 : " + sum);
+		
 		
 	}
 	
@@ -157,13 +196,22 @@ public class ArrayPractice {
 			if(num>=3 && num%2==1) {
 				int[] arr = new int[num]; //입력정수만한 방 생성
 				
-				//오름,내림
-				for(int i=0; i<arr.length; i++) {			//다시!!
+				//오름
+				for(int i=0; i<(arr.length/2)+1; i++) {			//다시!!생각!!!
 					arr[i] = i;
 				}
 				
-				for(int i=0; i<arr.length; i++) {
+				for(int i=0; i<(arr.length/2)+1; i++) {
 					System.out.print(arr[i]+1 + " ");
+				}
+				
+				//내림
+				for(int i=(arr.length/2); i>0; i--) {			//다시!!
+					arr[i] = i;
+				}
+				
+				for(int i=(arr.length/2); i>0; i--) {
+					System.out.print(arr[i] + " ");
 				}
 				
 			break;	
@@ -175,16 +223,64 @@ public class ArrayPractice {
 	
 	}
 	
-	public void practice9() {
+	public void practice9() {				// 다시 생각!!
+	      
+		Scanner sc = new Scanner(System.in);
+	      System.out.print("치킨 이름을 입력하세요 : ");
+	      String str = sc.nextLine();
+
+	      String[] arr = new String[6];
+
+	      arr[0] = "굽네";
+	      arr[1] = "교촌";
+	      arr[2] = "노랑통닭";
+	      arr[3] = "자담";
+	      arr[4] = "푸라닭";
+	      arr[5] = "인생닭강정";
+
+	      for (int i = 0; i < arr.length; i++) {
+	    	  
+	         if (str.equals(str) == str.equals(arr[i])) {
+	            System.out.println(arr[i] + "배달가능");
+	         return;
+	         }else if (str.equals(str) != str.equals(arr[i])) {
+	         }
+	      }
+	      System.out.println(str + "치킨은 없는 메뉴입니다");
+	}
+	
+
+	
+	public void practice10() {		//다시생각
 		
 		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("주민등록번호(-포함) : ");
+		String str = sc.nextLine();
+		
+		// 반복문 이용하여 char[]에 옮겨담기
+		char[] origin = new char[str.length()];
+		
+		for(int i=0; i<origin.length; i++) {
+			origin[i] = str.charAt(i);
+		}
+		
+		// 복사본 char[]에 성별자리 이후부터 *로 값이 들어가게끔 깊은복사 후 바로 출력
+		char[] copy = new char[origin.length];
+		
+		for(int i=0; i<copy.length; i++) {
 			
-		System.out.print("정수 : ");
-		int num = sc.nextInt();
-		System.out.println(num);
+			if(i <= 7) {
+				copy[i] = origin[i];
+			}else {	// 8번 인덱스부터 *값 들어가도록
+				copy[i] = '*';
+			}
+			// 바로 출력
+			System.out.print(copy[i]);
 		
+		}
 		
-	}	
+	}
 	
 	
 	
