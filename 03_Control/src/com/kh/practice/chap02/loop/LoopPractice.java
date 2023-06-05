@@ -252,53 +252,56 @@ public class LoopPractice {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		
-		 while(true) {
+		while(true) {
 			
 			System.out.print("연산자(+, -, *, /, %) : ");
 			String op = sc.nextLine();
 			
+			// 종료
 			if(op.equals("exit")) {
 				System.out.println("프로그램을 종료합니다.");
-				return;		// 다시 반환해야함
+				break;
 			}
 			
+			// 정수 입력 받
 			System.out.print("정수1 : ");
 			int num1 = sc.nextInt();
 			
 			System.out.print("정수2 : ");
 			int num2 = sc.nextInt();
 			
+			sc.nextLine(); // 엔터제거 (조건 불충족으로 반복문 다시 돌때 정수2 다음 연산자 출력할 때 문제 발생하기 때문)
+			
+			// 나눗셈 이면서 정수2가 0이면 다시 입력 받
+			if(op.equals("/") && num2 == 0) {								//문자열 비교이기때문에 .equals 로 비교
+				System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+				continue; // **아래 내용 수행 안하고 반복문 처음으로 돌아감
+			}else {
 				
-				if(op.equals("/") && num2 == 0) {								//문자열 비교이기때문에 .equals 로 비교
-					System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
-					
-				}else {
-					
-					switch(op) {
-					case "+" :
-						System.out.printf("%d + %d = %d\n", num1, num2, (num1 + num2));
-						break;
-					case "-" :
-						System.out.printf("%d - %d = %d\n", num1, num2, (num1 - num2));
-						break;
-					case "*" :
-						System.out.printf("%d * %d = %d\n", num1, num2, (num1 * num2));
-						break;
-					case "/" :
-						System.out.printf("%d / %d = %d\n", num1, num2, (num1 / num2));
-						break;
-					case "%" :
-						System.out.printf("%d % %d = %d\n", num1, num2, (num1 % num2));
-						break;
-					default :
-						System.out.println("없는 연산자입니다. 다시 입력해주세요.");
-					}
-					
+				switch(op) {
+				case "+" :
+					System.out.printf("%d + %d = %d\n", num1, num2, (num1 + num2));
+					break;
+				case "-" :
+					System.out.printf("%d - %d = %d\n", num1, num2, (num1 - num2));
+					break;
+				case "*" :
+					System.out.printf("%d * %d = %d\n", num1, num2, (num1 * num2));
+					break;
+				case "/" :
+					System.out.printf("%d / %d = %d\n", num1, num2, (num1 / num2));
+					break;
+				case "%" :
+					System.out.printf("%d % %d = %d\n", num1, num2, (num1 % num2));
+					break;
+				default :
+					System.out.println("없는 연산자입니다. 다시 입력해주세요.");
 				}
+				
+			}
+			
+		}
 
-		 }
-		
 	}
 	
 	public void practice13() {

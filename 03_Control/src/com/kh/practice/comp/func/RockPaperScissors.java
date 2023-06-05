@@ -6,60 +6,110 @@ public class RockPaperScissors {
 
 	public void rps() {
 		
-		// 0. 이름이 뭐냐
-		// 1.(나) 가위바위보
-		// 2.(컴퓨터) 가위바위보
-		// 3. 둘이 비교
-		// 4. 승 패 가린다
-		// 5. 종료된다
-		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("당신의 이름을 입력해주세요 : ");
+		// 필요한 변수 선언
+		int total = 0;	// 전
+		int win = 0;	// 승
+		int tie = 0;	// 무
+		int lose = 0;	// 패
+		
+		System.out.print("당신의 이름을 입력해주세요 : ");	// while(true) 전에
 		String name = sc.nextLine();
 		
-		System.out.print("가위바위보 : ");
-		String user = sc.nextLine();			// 내가 낸 가바보를 user에 저장
-		
-		int com = (int)(Math.random()* 3 + 1);  // 컴퓨터가 낸 랜덤 가바보를 com에 저장
-		
-		
-		if(user.equals("exit")) {
-			System.out.println("종료하것슈!");
-			// 전 승 무 패
-			return;
-		}else {
+		while(true) {
 			
-			switch(com) {
+			System.out.print("가위바위보 : ");
+			String rps = sc.nextLine(); // exit
+			
+			int random = (int)(Math.random()*3+1); // 경우의수 1~3 (주먹,가위,보 3개니까)
+			String com = "";
+			
+			switch(random) { // 1 2 3
 			case 1 :
-				System.out.println("컴퓨터 : 가위");
+				com = "가위";
 				break;
 			case 2 :
-				System.out.println("컴퓨터 : 바위");
+				com = "바위";
 				break;
 			case 3 :
-				System.out.println("컴퓨터 : 보");
+				com = "보";
 				break;
 			}
 			
-			System.out.println(name + " : " + user);
 			
-			
-			// 비교하자
-			if(user.equals("가위") && com==1 || user.equals("바위") && com==2 || user.equals("보") && com==3) {
-				System.out.println("비겼습니다");
-			}else if(user.equals("가위") && com==2 || user.equals("바위") && com==3 || user.equals("보") && com==1) {
-				System.out.println("졌습니다ㅜㅜ");
-			}else if(user.equals("가위") && com==3 || user.equals("바위") && com==1 || user.equals("보") && com==2) {
-				System.out.println("이겼습니다ㅋㅋ");
+			if(rps.equals("exit")) {	// exit 입력한 경우 종료!
+				// 전승무패 출력 => 이따가
+				System.out.println(total + "전 " + win + "승 " + tie + "무 " + lose + "패");
+				// 종료
+				return; // 메소드 밖으로 탈출!
+				
+			}else if(rps.equals("가위") || rps.equals("바위") || rps.equals("보")) { // 잘 입력한 경우 (게임시작!)
+				
+						total++; //**
+						
+						System.out.println("컴퓨터 : " + com);	// 컴퓨터 : 가위(랜덤값)
+						System.out.println(name + " : " + rps);	// 이수진 : 바위(내가 입력한 값)
+						
+						if(com.equals("가위")) { // 컴퓨터가 '가위'를 낸 경우
+							switch(rps) {
+							case "가위" : 
+								System.out.println("비겼습니다.");
+								tie++;
+								break;
+							case "바위" : 
+								System.out.println("이겼습니다.");
+								win++;
+								break;
+							case "보" : 
+								System.out.println("졌습니다ㅜㅜ");
+								lose++;
+								break;
+							}
+						}
+						
+						if(com.equals("바위")) { // 컴퓨터가 '바위'를 낸 경우
+							switch(rps) {
+							case "바위" : 
+								System.out.println("비겼습니다.");
+								tie++;
+								break;
+							case "보" : 
+								System.out.println("이겼습니다.");
+								win++;
+								break;
+							case "가위" : 
+								System.out.println("졌습니다ㅜㅜ");
+								lose++;
+								break;
+							}
+						}
+						
+						if(com.equals("보")) { // 컴퓨터가 '보'를 낸 경우
+							switch(rps) {
+							case "보" : 
+								System.out.println("비겼습니다.");
+								tie++;
+								break;
+							case "가위" : 
+								System.out.println("이겼습니다.");
+								win++;
+								break;
+							case "바위" : 
+								System.out.println("졌습니다ㅜㅜ");
+								lose++;
+								break;
+							}
+						}
+				
+			}else {
+				System.out.println("잘못 입력하셨습니다.");
 			}
 			
-			
 		}
-		
-		
-		
+	
 	}
+	
 	
 	
 	

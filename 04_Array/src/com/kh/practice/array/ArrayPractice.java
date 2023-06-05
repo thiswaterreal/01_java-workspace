@@ -149,6 +149,48 @@ public class ArrayPractice {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		// 조건 맞을때까지 반복
+		while(true) {
+			// 정수 입력
+			System.out.print("정수 : ");
+			int num = sc.nextInt();
+			
+			// 정수 조건 : 3이상이면서 홀수(num%2==1)
+			if(num>=3 && num%2==1) {
+				
+				int[] arr = new int[num];
+				
+				/*
+				 * 5입력시 => {1,2,3,2,1}				=> 2번 인덱스까지 증가. 그 이후로 감소
+				 * 7입력시 => {1,2,3,4,3,2,1}			=> 3번 인덱스까지 증가. 그 이후로 감소
+				 * 9입력시 => {1,2,3,4,5,4,3,2,1}		=> 4번 인덱스까지 증가. 그 이후로 감소
+				 * 									=> (배열의 길이 / 2) 인덱스까지 증가. 그 이후로 감소
+				 */
+				int value = 1;
+				
+				for(int i=0; i<arr.length; i++) {	// 값대입
+					arr[i] = value;
+					if(i<arr.length/2) {
+						value++;
+					}else {
+						value--;
+					}
+				}
+				
+				for(int i=0; i<arr.length; i++) {
+					System.out.print(arr[i] + " ");
+				}
+				
+			break;	
+			}else {
+				System.out.println("다시 입력하세요.");
+			}
+			
+		}
+		
+		/*
+		Scanner sc = new Scanner(System.in);
+		
 		while(true) {
 			
 		System.out.print("정수 : ");
@@ -180,7 +222,8 @@ public class ArrayPractice {
 				System.out.println("다시 입력하세요.");
 			}
 			
-		}	
+		}
+		*/
 	
 	}
 	
@@ -285,6 +328,26 @@ public class ArrayPractice {
 	public void practice13() {
 		
 		int[] arr = new int[10];
+		// 값대입(난수)
+		for(int i=0; i<arr.length; i++) {
+			arr[i] = (int)(Math.random() * 10 + 1);
+			for(int j=0; j<i; j++) {	// *** j<i(?) // 2 2			// 어려우니까 차분히 생각!
+				if(arr[i] == arr[j]) {
+					// 중복값 제거?? => i와 j가 같으면 랜덤한수를 다시 만드는 코드
+					i--; // *** 값이 중복되면 i를 1빼주어 다시 랜덤이 돌도록 해줌
+				}
+			}
+		}
+		
+		// 값출력
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		
+		
+		
+		/*
+		int[] arr = new int[10];
 		
 		// 2. 값대입
 		for(int i=0; i<arr.length; i++) {
@@ -304,7 +367,7 @@ public class ArrayPractice {
 		for(int i=0; i<arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
-		
+		*/
 	}
 	
 	public void practice14() {
@@ -343,100 +406,99 @@ public class ArrayPractice {
 		
 	}
 	
-	public void practice15() {		// 모올러,,
+	public void practice15() {		// 모올러,, //**버블정렬을 사용해보자!(자주 사용)
 		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("문자열 : ");
-		String str = sc.nextLine();
+		String str = sc.nextLine();					//apple
 		
-		char[] arr = new char[str.length()];
+		char[] arr = new char[str.length()];		//a p p l e (5개) 입력값대입하기 위한 방 생성
 		
+		int count = 0; // 문자 개수 출력
 		
-		int count = 0;
-		// 2. 한글자씩 입력값 대입 + 중복값 제거 + count 증가
-		for(int i=0; i<arr.length; i++) {
-			arr[i] = str.charAt(i);
-			count++;
+		System.out.print("문자열에 있는 문자 : ");
+		
+		for(int i=0; i<arr.length; i++) { // char 배열에 값대입
+			arr[i] =  str.charAt(i);
 			
-			/*
-			// **중복값 제거 + count증가
+			// 중복제거?? 출력.. apple => a p l e
+			boolean flag = true;	// ** flag 어렵지만 엄청 자주 사용!! 스위치처럼 껐다 켤 수 있음!
+			
 			for(int j=0; j<i; j++) {
-				if(arr[i] == arr[j]) {
-					i--;
+				if(arr[j] == arr[i]) {	//apple a(true) p(true) p(false!)
+					flag = false;
 				}
 			}
-			*/
+			
+			if(flag /*flag==true*/) {
+				count++; //카운트
+				if(i == 0) {
+					System.out.print(arr[i]);
+				}else {
+					System.out.print(", " + arr[i]);
+				}
+			}
 		}
-		
-		// 2. 문자 출력
-		System.out.print("문자열에 있는 문자 : ");
-		for(int i=0; i<arr.length; i++) {
-			System.out.print(arr[i] + ", ");
-		}
-		
-		// 3. 문자개수 출력
 		System.out.println();
-		System.out.println("문자 개수 : " + count);
+		System.out.print("문자 개수 : " + count);
 		
 	}
 	
 	public void practice16() {		// 모르것슈..
-
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("배열의 크기를 입력하세요 : ");
-		int size = sc.nextInt();
+		int num = sc.nextInt();
+		sc.nextLine(); // 엔터제거 조심!
 		
-		sc.nextLine(); //ㅜㅜㅜㅜ엔터제거 조심조심!!
+		String[] origin = new String[num]; 	// 원본
+		String[] copy = null; 	// 복사본
 		
-		// 1. 배열 생성
-		String[] arr = new String[size];
-		
-		// 2. 입력받아 값대입
-		for(int i=0; i<arr.length; i++) {
-			System.out.print((i+1) + "번째 문자열 : ");
-			arr[i] = sc.nextLine();
+		for(int i=0; i<origin.length; i++) {
+			System.out.printf("%d번째 문자열 : ", i+1);
+			origin[i] = sc.nextLine();
 		}
 		
-		// 3. 무한반복문 (더 입력?)
 		while(true) {
 			
 			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
-			char ch = sc.nextLine().charAt(0);
+			char ch = sc.nextLine().charAt(0); // Y y N n
 			
-			if(ch == 'Y' && ch == 'y') {
+			System.out.println("ch의 값 : " + ch);
+			if(ch == 'Y' || ch == 'y') { // 더 입력하겠다는 경우
 				System.out.print("더 입력하고 싶은 개수 : ");
-				int more = sc.nextInt();
-				sc.nextLine(); //ㅜㅜㅜㅜ엔터제거 조심조심!!
+				num = sc.nextInt();	// 변수 한번 더 사용 가능(입력 한번 더 받아라)
+				sc.nextLine(); // 엔터제거
 				
-				// 그 다음 우짜누..
+				//** Arrays.copyOf(원본배열명, 길이);
+				copy = Arrays.copyOf(origin, origin.length + num);
 				
+				for(int i=origin.length; i<copy.length; i++) {	//** i=origin.length;
+					System.out.printf("%d번째 문자열 : ", i+1);
+					copy[i] = sc.nextLine();
+				}
 				
+				origin = copy; // 주소값 변경 대입
 				
-			
-			break; //**어디서?
-			}else if(ch == 'N' && ch == 'n'){
-			
+			}else { // 그만하는 경우
+				System.out.print("[");
+				for(int i=0; i<origin.length; i++) {
+					if(i == origin.length - 1) {	// 마지막 인덱스인 경우
+						System.out.printf("%s", origin[i]);
+					}else {
+						System.out.printf("%s, ", origin[i]);
+					}
+				}
+				System.out.println("]");
+				break;
 			}
 			
-			System.out.println("마무리.. 모두 출력...");
-			
-		}
-		
-		
-		
-		
+		}		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
-	
-
+		
+		
+		
+		
+} // 메소드꺼
