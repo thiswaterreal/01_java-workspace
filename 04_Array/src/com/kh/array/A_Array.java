@@ -195,7 +195,7 @@ public class A_Array {
 		
 		int result = 0; // 선언과 동시에 초기화(값대입)
 
-		// 배열 쓰면서 볼 수 있는 오류들 모음집
+		// **배열 쓰면서 볼 수 있는 오류들 모음집
 		// int[] arr; // (선언만) 크기 지정 누락한 경우
 		
 		int[] arr = null; // 아무것도 참조하고 있지 않음
@@ -315,7 +315,7 @@ public class A_Array {
 		
 		System.out.print("배열의 길이 : ");
 		int size = sc.nextInt();
-		sc.nextLine(); // 버퍼에 남아있는 엔터를 제거해줄 수 있는 코드 추가
+		sc.nextLine(); // **버퍼에 남아있는 엔터를 제거해줄 수 있는 코드 추가
 		
 		String[] arr = new String[size];	//'문자열 배열' 생성
 		
@@ -403,7 +403,7 @@ public class A_Array {
 			
 			// 짝수인지 판별 => 누적합
 			if(arr[i] % 2 == 0) {
-				sum += arr[i]; // i가 더해지는게 아니라 arr[i]값이 더해져야 하니까
+				sum += arr[i]; // i가 더해지는게 아니라 **arr[i]값** 이 더해져야 하니까
 			}
 						
 		}

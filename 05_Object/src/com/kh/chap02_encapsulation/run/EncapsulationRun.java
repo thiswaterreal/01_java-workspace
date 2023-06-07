@@ -16,7 +16,7 @@ public class EncapsulationRun {
 	 * 		직접접근(.자동뜨는거)을 막기위해 private 라는 접근제한자 사용
 	 * 
 	 * 	2) setter / getter 메소드 만들어야함
-	 * 	private 하는 순간 필드에 직접접근 ㅂ루가!
+	 * 	private 하는 순간 필드에 직접접근 불가!
 	 * 	setter 메소드 : 해당 필드에 대입시키고자 하는 값 전달 받아서 해당 필드에 대입시켜주는 메소드
 	 * 	getter 메소드 : 해당 필드에 담긴값을 반환해주는 메소드
 	 * 
