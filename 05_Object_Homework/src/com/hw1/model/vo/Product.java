@@ -9,13 +9,11 @@ public class Product {
 	private int price;
 	private double tax;
 	
-	// 생성자
+	// 생성자 (기본 + 전체)
 	// 1. 기본생성자
-	public Product() {
-		
-	}
+	public Product() {}
 	
-	// 2. 매개변수 생성자
+	// 2. 매개변수 생성자 (파랑:필드 / 갈색:매개변수)
 	public Product(String productId, String productName, String productArea, int price, double tax) {
 		this.productId = productId;
 		this.productName = productName;
@@ -24,7 +22,7 @@ public class Product {
 		this.tax = tax;
 	}
 	
-	// 메소드부
+	// 메소드부 (get-set 메소드)
 	public String getProductId() {
 		return productId;
 	}
@@ -60,5 +58,15 @@ public class Product {
 	public String information() {
 		return productId + " " + productName + " " + productArea + " " + price + " " + tax;
 	}
+	
+	/*//뭘 쓸지 모를 땐 일단 이렇게 작성해둬도 됨
+	public String information() {
+		return "";
+	}
+	public int information() {
+		return ;
+	}
+	*/
+	
 	
 }

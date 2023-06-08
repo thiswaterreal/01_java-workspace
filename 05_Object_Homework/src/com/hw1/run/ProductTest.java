@@ -5,7 +5,9 @@ import com.hw1.model.vo.Product;
 public class ProductTest {
 
 	public static void main(String[] args) {
-
+		
+		// Product p1 = new Product(); <= 이런 형식이 기본생성자 이용한것임
+		
 		// 매개변수 생성자를 이용하여 3개의 객체 생성 (위의 사용 데이터 참고)
 		// 객체가 가진 필드 값 출력 확인
 		Product p1 = new Product("ssgnote9", "갤럭시노트9", "경기도 수원", 960000, 10.0);
@@ -39,7 +41,7 @@ public class ProductTest {
 		System.out.println("부가세 포함 가격 : " + (int)(p2.getPrice() + (p2.getPrice() * p2.getTax())) + "원");
 		System.out.println("상풍명 : " + p3.getProductName());
 		System.out.println("부가세 포함 가격 : " + (int)(p3.getPrice() + (p3.getPrice() * p3.getTax())) + "원");
-		// double형이 있다보니까 (int)로 묶어주기!
+		// double형이 있다보니까 큰거 따라감. 따라서 형변환! (int)로 묶어주기!
 		
 		
 	}
