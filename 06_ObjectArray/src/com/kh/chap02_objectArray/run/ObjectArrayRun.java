@@ -39,7 +39,7 @@ public class ObjectArrayRun {
 		
 		int total = 0;
 		for(int i=0; i<phones.length; i++) { // 0, 1, 2
-			System.out.println(phones[i].information());
+			System.out.println(phones[i].information()); // 전체(3) 정보 출력
 			total += phones[i].getPrice();	// 누적합
 		}
 		System.out.println("총 가격 : " + total);
