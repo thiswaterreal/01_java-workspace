@@ -34,6 +34,7 @@ public class Run {
 			System.out.println("emp[" + i + "] : " + emps[i].information());
 		}
 		
+		
 		// 직원 각각의 보너스가 적용된 1년 연봉을 계산하여 출력		
 		// 보너스가 적용된 연봉 = (급여 +(급여 * 보너스 포인트)) * 12
 		System.out.println("==============================================");
@@ -48,7 +49,23 @@ public class Run {
 		System.out.println("==============================================");
 		//int all = ((total1 + total2 + total3)/3);
 		int all = ((total1 + total2 + total3)/emps.length);
-		System.out.println("직원들의 연봉의 평균 : " + all + "원");
+		
+		
+		
+		/* 누적합을 이용한 방법
+		// 직원 각각의 보너스가 적용된 1년 연봉을 계산하여 출력		
+		// 보너스가 적용된 연봉 = (급여 +(급여 * 보너스 포인트)) * 12
+		int sum = 0;
+		for(int i=0; i<emps.length-1; i++) {
+			System.out.println(emps[i].getEmpName() + "의 연봉 : "
+					+ (emps[i].getSalary() + (int)((emps[i].getSalary() * emps[i].getBonusPoint()))) * 12 + "원");
+			sum += (emps[i].getSalary() + (int)((emps[i].getSalary() * emps[i].getBonusPoint()))) * 12 + "원");
+		}
+		
+		// 3명 직원의 연봉 평균을 구하여 출력
+		*/
+		
+		
 		
 		
 	}
