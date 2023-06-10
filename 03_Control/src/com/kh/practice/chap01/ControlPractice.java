@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ControlPractice {
 
 	public void practice1() {
-		
+
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("1. 입력");
@@ -33,6 +33,7 @@ public class ControlPractice {
 			System.out.println("프로그램이 종료됩니다.");
 			break;
 		}
+		
 		
 	}
 	
@@ -66,16 +67,25 @@ public class ControlPractice {
 		System.out.print("수학점수 : ");
 		int num3 = sc.nextInt();
 		
-		System.out.println("합계 : " + (num1 + num2 + num3));
-		System.out.println("평균 : " + ((num1 + num2 + num3)/3));
+		int sum = num1 + num2 + num3;
+		double aver = (num1 + num2 + num3)/3;
 		
-		if(((num1 + num2 + num3)/3) >= 60) {
-			if(num1 > 40 && num2 > 40 && num3 > 40) {		// 1 < num <10 이런게 불가능, 쪼개라!
-				System.out.println("축하합니다, 합격입니다.");
+		System.out.println("합계 : " + sum);
+		System.out.println("평균 : " + aver);
+		
+		if(aver >= 60) {
+			if(num1 >= 40 && num2 >= 40 && num3 >= 40) {		// 1 < num <10 이런게 불가능, 쪼개라!
+				System.out.println(num1);
+				System.out.println(num2);
+				System.out.println(num3);
+				System.out.println(sum);
+				System.out.println(aver);
+				System.out.println("축하합니다, 합격입니다!");
 			}
 		}else {
 			System.out.println("불합격입니다.");
 		}
+		
 	}
 	
 	public void practice4() {
@@ -113,21 +123,17 @@ public class ControlPractice {
 		System.out.print("비밀번호 : ");
 		String pw = sc.nextLine();
 		
-		
-		String id1 = "myId";
-		String pw1 = "myPassword12";
-		
-		if(id.equals(id1)) {							// 		  문자열 vs 문자열 비교
-			if(pw.equals(pw1)) {						// [표현법] 문자열.equals(문자열);
+		if(id.equals("myId")) {						// [표현법] 문자열.equals(문자열);
+			if(pw.equals("myPassword12")) {
 				System.out.println("로그인 성공");
 			}else {
-				System.out.println("비밀번호가 틀렸습니다");
+				System.out.println("비밀번호가 틀렸습니다.");
 			}
 		}else {
 			System.out.println("아이디가 틀렸습니다.");
 		}
 
-		}
+	}
 	
 	public void practice6() {
 		
@@ -160,7 +166,7 @@ public class ControlPractice {
 		System.out.print("몸무게(kg)를 입력해 주세요 : ");
 		double weight = sc.nextDouble();
 		
-		double bmi = weight / (height * height);
+		double bmi = weight / (height * height);	// 변수 만들기
 		System.out.println("BMI 지수 : " + bmi);
 		
 		if(bmi < 18.5) {
@@ -179,7 +185,7 @@ public class ControlPractice {
 	
 	
 	public void practice8() {							
-		
+	
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("피연산자1 입력 : ");
@@ -233,31 +239,38 @@ public class ControlPractice {
 		System.out.print("과제 점수(30) : ");
 		double pra = sc.nextDouble();
 		
-		System.out.print("출석 점수(20) : ");
-		int att = sc.nextInt();
+		System.out.print("출석 횟수(20) : ");
+		double att = sc.nextDouble();
 		
 		System.out.println("=============== 결과 ===============");
 		
 		double all = (mid * 0.2)+(fin * 0.3)+(pra * 0.3)+(att);
-		
-		
-		if(att >= 14) {
-			
+
+		if (all >= 70 && att > 20 * 0.7) {	// 점수 통과 / 출석 통과
 			System.out.println("중간 고사 점수(20) : " + mid * 0.2);
 			System.out.println("기말 고사 점수(30) : " + fin * 0.3);
 			System.out.println("과제 점수(30) : " + pra * 0.3);
 			System.out.println("출석 점수(20) : " + att);
 			System.out.println("총점 : " + all);
-			
-			if(all >= 70) {
-				System.out.println("PASS");
-			}else if(all < 70) {
-				System.out.println("Fail [점수미달]");
+			System.out.println("Pass");
+		} else {
+			if (all >= 70) {
+				System.out.println("Fail [출석 횟수 부족] (" + att + "/20");
+			} else if (att > 20 * 0.7) {	// 점수 미달 / 출석 통과
+				System.out.println("중간 고사 점수(20) : " + mid * 0.2);
+				System.out.println("기말 고사 점수(30) : " + fin * 0.3);
+				System.out.println("과제 점수(30) : " + pra * 0.3);
+				System.out.println("출석 점수(20) : " + att);
+				System.out.println("총점 : " + all);
+				System.out.println("Fail [점수 미달]");
+			} else {	// 점수 미달 / 출석 미달
+				System.out.println("Fail [출석 횟수 부족] (" + att + "/20)");
+				System.out.println("총점 : " + all);
+				System.out.println("Fail [점수 미달]");
 			}
-				
-		}else {
-			System.out.println("Fail [출석 회수 부족 (" + att + "/20)]");
+
 		}
+		
 		
 	}
 	
@@ -281,5 +294,5 @@ public class ControlPractice {
 		
 	}
 	
-	}
+}//클래스 끝
 	
