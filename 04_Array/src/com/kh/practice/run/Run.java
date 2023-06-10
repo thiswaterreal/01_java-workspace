@@ -18,12 +18,12 @@ public class Run {
 		//a.practice8(); //어째저째 됐는데.. 왜 됐는지 모르겠어;
 		//a.practice9();
 		//a.practice10();
-		//a.practice11();
+		a.practice11();
 		//a.practice12();
 		//a.practice13();
 		//a.practice14();
 		//a.practice15();
-		a.practice16();
+		//a.practice16();
 		
 		
 	}
