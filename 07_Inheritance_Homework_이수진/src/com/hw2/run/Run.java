@@ -26,6 +26,7 @@ public class Run {
 		r[0].draw();
 		System.out.println("=== rectangle2 ===");
 		r[1].draw();
+		
 	}
 
 }
