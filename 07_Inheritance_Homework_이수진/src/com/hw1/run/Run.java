@@ -31,6 +31,7 @@ public class Run {
 		// 계속 추가할 것인지 물어보고, 대소문자 상관없이 y이면 계속 객체 추가
 		// ‘n’일 경우 더 이상 그만 입력 받도록 …
 		// 배열에 담긴 사원들의 정보를 모두 출력
+		
 		Scanner sc = new Scanner(System.in);
 		
 		int total = 0;
@@ -56,30 +57,31 @@ public class Run {
 			System.out.print("부서 : ");
 			String dept = sc.nextLine();
 				
+			emp[total] = new Employee(name, age, height, weight, salary, dept); // **입력받은 값 싸그리 담아!
 			
-			emp[total] = new Employee(name, age, height, weight, salary, dept); //**
-			
-			total++;
+			total++;	// **for문 안이 아니라 여기서 ++;이 되어야함. 이미 while안에서 돌고 있으니까
 			
 			// 계속 추가?
 			System.out.print("계속 추가하시겠습니까(Y/N) ? ");
 			char ch = sc.nextLine().charAt(0);
 			
-
-			if(ch == 'N' || ch == 'n') {
+			
+			if(ch == 'Y' || ch == 'y') {
+				
+			}else if(ch == 'N' || ch == 'n') {
 				break;
 			}
 			
+			/* 이렇게 쓰면 더 간단!
+			if(ch == 'N' || ch == 'n') {
+				break;
+			}
+			 */
 			
 		}//while(true)끝
-		
-		
-		// 출력은 마무리니까 while 밖에서!
-		for(int i=0; i<total; i++) {
-			System.out.println(emp[i]);
+		for(int i=0; i<total; i++) {				// 입력받은 사람까지만 출력해야하니까 i<total;
+			System.out.println(emp[i].toString());	// .toString() 생략 가능. 늘 내포되어있음
 		}
-		
-		
 	}
 
 }

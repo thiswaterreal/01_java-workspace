@@ -7,8 +7,8 @@ public class Student extends Person {	// 상속받~
 	
 	public Student() {}
 	public Student(String name, int age, double height, double weight, int grade, String major) {
-		super(age, height, weight);
-		super.name = name; //**중요
+		super(age, height, weight);		// 부모클래스의 private		//(문제)age, height, weight 값은 부모 생성자를 통해 초기화
+		super.name = name; // **중요**	// 부모클래스의 protected	//(문제)name값은 부모 필드값에 직접 접근해서 초기화
 		this.grade = grade;
 		this.major = major;
 	}

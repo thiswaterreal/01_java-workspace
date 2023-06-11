@@ -2,7 +2,7 @@ package com.hw1.model.vo;
 
 public class Person {	// 부모에요~
 
-	protected String name;
+	protected String name;	// (문제) name은 #protected로 하고, name필드는 생성자부에서 초기화하지x
 	private int age;
 	private double height;
 	private double weight;

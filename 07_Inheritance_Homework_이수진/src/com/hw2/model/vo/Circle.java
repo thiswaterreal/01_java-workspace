@@ -17,10 +17,14 @@ public class Circle extends Point { // 상속받~
 		this.radius = radius;
 	}
 	
-	
+	// draw 메소드
 	public void draw() {
+		// 부모 클래스의 draw() 메소드 호출을 통해 x,y 좌표값을 출력 후
 		super.draw();
-		System.out.println("면적 : " + );
+		// 면적 : PI * 반지름 * 반지름
+		// 둘레 : PI * 반지름 * 2
+		System.out.println("면적 : " + (Math.PI * radius * radius));
+		System.out.println("둘레 : " + (Math.PI * radius * 2));
 	}
 	
 	

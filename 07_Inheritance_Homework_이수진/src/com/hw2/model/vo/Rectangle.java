@@ -25,10 +25,14 @@ public class Rectangle extends Point { // 상속받~
 		this.height = height;
 	}
 	
-	/*
+	// draw 메소드
 	public void draw() {
-	
+		// 부모 클래스의 draw() 메소드 호출을 통해 x,y 좌표값을 출력 후
+		super.draw();
+		// 면적 : 너비 * 높이
+		// 둘레 : 2 * (너비 + 높이)
+		System.out.println("면적 : " + (width * height));
+		System.out.println("둘레 : " + (2 * (width + height)));
 	}
-	*/
 	
 }

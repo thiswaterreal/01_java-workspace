@@ -33,6 +33,8 @@ public class AfterRun {
 		
 		s.setPrice(1200000);		// 부모클래스에 있는 메소드 호출하여 수정도 가능
 		s.setMobileAgency("SK");	// 자식클래스(나)에 있는 메소드 호출하여 수정도 가능
+									// => 각 객체별 .set메소드로 호출하여 부모클래스, 자식클래스 모두 수정 가능
+		
 		//System.out.println(d.information());  // 가능. 오버라이딩
 		
 		/*
