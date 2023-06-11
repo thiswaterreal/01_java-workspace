@@ -26,6 +26,7 @@ public class Rectangle extends Point { // 상속받~
 	}
 	
 	// draw 메소드
+	@Override
 	public void draw() {
 		// 부모 클래스의 draw() 메소드 호출을 통해 x,y 좌표값을 출력 후
 		super.draw();

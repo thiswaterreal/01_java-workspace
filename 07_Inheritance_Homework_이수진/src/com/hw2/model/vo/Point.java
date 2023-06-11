@@ -24,10 +24,10 @@ public class Point {	// 부모에요~
 		this.y = y;
 	}
 	
-	
+	// draw 메소드
 	public void draw() {
-		System.out.println(x);
-		System.out.println(y);
+		System.out.println("x값 : " + x);
+		System.out.println("y값 : " + y);
 	}
 	
 	
