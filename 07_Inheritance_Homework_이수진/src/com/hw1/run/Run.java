@@ -27,15 +27,17 @@ public class Run {
 		
 		// 사원들의 정보를 키보드로 계속 입력 받고 → while(true) 무한 반복문을 통해
 		// 입력받은 정보들을 가지고 매개변수 생성자를 이용하여 객체 배열에 객체 생성
-		// 한명씩 추가 될때마다 카운트함
+		// 한명씩 추가 될때마다 카운트함(= 변수에 숫자를 담아라)
 		// 계속 추가할 것인지 물어보고, 대소문자 상관없이 y이면 계속 객체 추가
 		// ‘n’일 경우 더 이상 그만 입력 받도록 …
 		// 배열에 담긴 사원들의 정보를 모두 출력
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int total = 0;
+		int count = 0;
 		while(true) {
+			
+			System.out.println(count + 1 + "번째 사원의 정보 입력");
 			
 			System.out.print("이름 : ");
 			String name = sc.nextLine();
@@ -56,30 +58,38 @@ public class Run {
 			
 			System.out.print("부서 : ");
 			String dept = sc.nextLine();
-				
-			emp[total] = new Employee(name, age, height, weight, salary, dept); // **입력받은 값 싸그리 담아!
 			
-			total++;	// **for문 안이 아니라 여기서 ++;이 되어야함. 이미 while안에서 돌고 있으니까
+			// 반복문을 활용하여 카운트함
+			emp[count] = new Employee(name, age, height, weight, salary, dept); // **입력받은 값 싸그리 담아!
+			
+			count++;	// **for문 안이 아니라 여기서 ++;이 되어야함. 이미 while안에서 돌고 있으니까
 			
 			// 계속 추가?
 			System.out.print("계속 추가하시겠습니까(Y/N) ? ");
-			char ch = sc.nextLine().charAt(0);
+			char yn = sc.nextLine().charAt(0);
 			
+			/*
+			if(yn == 'Y' || yn == 'y') {
+				// 반복문 또 돌리기(반복문이라 어차피 돌아)
+			}else if(yn == 'N' || yn == 'n') {
+				break;
+			}
+			*/
 			
-			if(ch == 'Y' || ch == 'y') {
-				
-			}else if(ch == 'N' || ch == 'n') {
+			// 변화있는 부분을 if조건문으로 돌리자!
+			if(yn == 'N' || yn == 'n') {
 				break;
 			}
 			
-			/* 이렇게 쓰면 더 간단!
-			if(ch == 'N' || ch == 'n') {
+			if(count == 10) {
 				break;
 			}
-			 */
 			
 		}//while(true)끝
-		for(int i=0; i<total; i++) {				// 입력받은 사람까지만 출력해야하니까 i<total;
+		// ** 출력
+		for(int i=0; i<count; i++) {				
+			// 입력받은 사람까지만 출력해야하니까 i<count;
+			// i<emp.length(); 로 하면 10번 돌기 때문에 입력받고 남은 공간은 null 됨
 			System.out.println(emp[i].toString());	// .toString() 생략 가능. 늘 내포되어있음
 		}
 	}
