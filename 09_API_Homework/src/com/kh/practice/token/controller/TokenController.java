@@ -9,11 +9,11 @@ public class TokenController {
 		
 		/*
 		// 방법1
-		String sum = "";
 		// 매개변수로 받아온 str을 StringTokenizer를 이용하여
+		// 띄어쓰기를 없애고 없앤 문자열 반환
 		StringTokenizer stn = new StringTokenizer(str, " ");	// 구분준비!
 		
-		// 띄어쓰기를 없애고 없앤 문자열 반환
+		String sum = "";
 		while(stn.hasMoreTokens()) {		
 			sum += stn.nextToken();		
 		}
@@ -21,9 +21,10 @@ public class TokenController {
 		*/
 		
 		// 방법2
-		String sum = "";
 		StringTokenizer stn = new StringTokenizer(str, " ");
-		int count1 = stn.countTokens(); // count1 고정!
+		
+		String sum = "";
+		int count1 = stn.countTokens(); // count1 11개 고정!
 		for(int i=0; i<count1; i++) {
 			sum += stn.nextToken();
 		}

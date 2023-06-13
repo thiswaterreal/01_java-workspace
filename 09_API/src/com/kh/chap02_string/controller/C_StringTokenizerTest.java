@@ -5,6 +5,7 @@ import java.util.StringTokenizer;
 public class C_StringTokenizerTest {
 
 	public void method() {
+		
 		String str = "Java,Oracle,JDBC,HTML,CSS,Spring";
 		
 		// 구분자를 기준으로해서 문자열을 분리시키는 방법
@@ -35,6 +36,7 @@ public class C_StringTokenizerTest {
 		// 방법2. 분리된 문자열들을 각각 토큰으로써 관리하고자 할 때 **중요**
 		// 		 java.util.StringTokenizer 클래스를 이용하는 방법
 		// 		 StringTokenizer stn = new StringTokenizer(분리시키고자 하는 문자열, 구분자);
+		
 		StringTokenizer stn = new StringTokenizer(str, ",");
 		
 		/*
@@ -52,16 +54,17 @@ public class C_StringTokenizerTest {
 		*/
 		
 		
-		/* 
-		// 문제발생 : 불가능 => stn.countTokens()값이 계속 바뀌기 때문
+		/*
+		// 방법0 : 불가능 => stn.countTokens()값이 계속 바뀌기 때문
 		for(int i=0; i<stn.countTokens(); i++) {
 			System.out.println(stn.nextToken());
 		}
-		*/
 		// i=0; i<6; true 출력("JAVA") i++;
 		// i=1; i<5; true 출력("Oracle") i++;
 		// i=2; i<4; true 출력("JDBC") i++;
-		// i=3; i<3; false
+		// i=3; i<3; false (조건이 안맞으니까 더이상 실행x)
+		*/
+		
 		
 		/*
 		// 해결방법1
@@ -71,10 +74,12 @@ public class C_StringTokenizerTest {
 		}
 		*/
 		
+		
 		// 해결방법2
-		while(stn.hasMoreTokens()) {	// 반복 수행될 조건 : 토큰이 남아있을때만 출력
+		while(stn.hasMoreTokens()) {		// 반복 수행될 조건 : 토큰이 남아있을때만 출력
 			System.out.println(stn.nextToken());
 		}
+			
 		
 	}
 	

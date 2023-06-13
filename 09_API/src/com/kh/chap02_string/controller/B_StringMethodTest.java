@@ -17,6 +17,7 @@ public class B_StringMethodTest {
 		String str2 = str1.concat("!!!");
 		System.out.println("str2 : " + str2);
 		
+		
 		//System.out.println(str1); // 바뀌진 않음 그대로 Hello World
 		
 		String str3 = str1 + "!!!";
@@ -40,15 +41,15 @@ public class B_StringMethodTest {
 		// 5. 문자열.length() : int
 		System.out.println("str1의 길이 : " + str1.length()); 	// 11
 		
-		// 6. 문자열.substring(int beginIndex) : String => 문자열의 beginIndex 위치에서부터 끝까지의 문자열을 추출해서 리턴
+		// 6. 문자열.substring(int beginIndex)			   : String => 문자열의 beginIndex 위치에서부터 끝까지의 문자열을 추출해서 리턴
 		//	  문자열.substring(int beginIndex, int endIndex) : String
-		//				=> 문자열의 beginIndex 위치에서부터 endIndex -1 위치까지 출력
+		//				=> 문자열의 beginIndex 위치에서부터 ~ endIndex -1 위치까지 출력
 		// Hello World
 		System.out.println(str1.substring(3));		// lo World // 3번째 인덱스 뒤부터 출력
 		System.out.println(str1.substring(3, 7));	// lo W 	//3인덱스 뒤부터 ~ 7인덱스 앞까지 출력
 		
 		// Hello만 추출해보기
-		System.out.println(str1.substring(0, 5));	// Hello 	// begin <= 출력 < end
+		System.out.println(str1.substring(0, 5));	// Hello 	// (begin <= 출력 < end)
 		
 		// **Quiz
 		// 1. Worl 만 추출 + concat 함수로 ! 엮어서 str0 만들기 => Worl!
@@ -60,9 +61,9 @@ public class B_StringMethodTest {
 		
 		// 7. 문자열.replace(char oldChar, char newChar) : String
 		// 	  문자열에서 oldChar 문자들을 newChar로 변환한 새 문자열 리턴
-		String str4 = str1.replace('l', 'c');
-		System.out.println(str4);
-		System.out.println("str1이 변경됐나 ? " + str1); // Hello World 그대로
+		String str4 = str1.replace('l', 'c');	
+		System.out.println(str4);					  	// Hecco Worcd
+		System.out.println("str1이 변경됐나 ? " + str1); 	// Hello World (그대로)
 		
 		// 8. 문자열.toUpperCase() : String => 문자열을 다 대문자로 변경한 새 문자열 리턴
 		//	  문자열.toLowerCase() : String => 문자열을 다 소문자로 변경한 새 문자열 리턴
@@ -91,13 +92,14 @@ public class B_StringMethodTest {
 		
 		// 10. 문자열.toCharArray() : char[]
 		//		쪼개서 하나씩!
-		char[] arr = str1.toCharArray();
+		char[] arr = str1.toCharArray();// 01234 56478
+		System.out.println(arr); 		// Hello World (쪼개져있음)
 		System.out.println(arr[0]); 	// H
 		System.out.println(arr[1]); 	// e
 		
 		// 11. String.valueof(char[] data) : String
 		// 		쪼갠거 합치기!
-		System.out.println(String.valueOf(arr));
+		System.out.println(String.valueOf(arr));	// Hello World (붙어있음)
 		
 	}
 	

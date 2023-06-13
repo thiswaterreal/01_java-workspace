@@ -11,8 +11,9 @@ public class BasicRun {
 
 		//================추상클래스 사용================
 		/*
-		// Person p = new Person();		 => 추상클래스라서 객체생성x
+		// Person p = new Person();		// 불가능 => 추상클래스라서 객체생성x
 		
+		// 부모타입으로  자식객체생성
 		Person mom = new Mother("김엄마", 50, 70, "출산");
 		Person baby = new Baby("김아기", 3.5, 70);
 		

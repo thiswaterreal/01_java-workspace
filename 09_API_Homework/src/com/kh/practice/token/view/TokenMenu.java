@@ -54,15 +54,12 @@ public class TokenMenu {
 		// 토큰 처리 후 글자, 토큰 처리 후 개수, 모두 대문자로 변환 한 것을 출력
 		
 		System.out.println("토큰 처리 전 글자 : " + str);
-		
 		System.out.println("토큰 처리 전 개수 : " + str.length());
 		
-		String rtnstr = tc.afterToken(str);
+		String rtnstr = tc.afterToken(str);	 // JavaProgram
 		
 		System.out.println("토큰 처리 후 글자 : " + rtnstr);
-		
 		System.out.println("토큰 처리 후 개수 : " + rtnstr.length()); 
-		
 		System.out.println("모두 대문자로 전환 : " + rtnstr.toUpperCase());
 		
 	}
