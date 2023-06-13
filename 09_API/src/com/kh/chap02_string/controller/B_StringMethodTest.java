@@ -87,6 +87,8 @@ public class B_StringMethodTest {
 		String str6 = "   JA  VA   ";
 		System.out.println("str6 : " + str6.trim());
 		
+		
+		
 		// 10. 문자열.toCharArray() : char[]
 		//		쪼개서 하나씩!
 		char[] arr = str1.toCharArray();
