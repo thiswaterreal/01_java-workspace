@@ -4,6 +4,7 @@ import com.kh.chap01_poly.part02_electronic.model.vo.Electronic;
 
 // 다형성 개념을 적용했을 때!!
 public class ElectronicShop2 {
+	
 	// 자리를 마련하자
 	// 다형성 : 부모타입 레퍼런스(Parent[]) 하나로 다양한 자식객체를 담을 수 있음!!
 	
@@ -19,6 +20,7 @@ public class ElectronicShop2 {
 	
 	// 부모타입 배열로 모든 자식 객체 다루기 Start!! ============
 	// 부모타입의 elec 은 new 자식객체 3칸;
+	// 부모타입 : Electronic[]
 	private Electronic[] elec = new Electronic[3];
 	private int count = 0;
 	
@@ -37,7 +39,7 @@ public class ElectronicShop2 {
 		// 맨처음 => count : 0 이었을 경우
 		// any = new Desktop(~~~);     
 		// elec[0] = new Desktop(~~~); 이거 실행하고 count 1 이 됨
-		// (0번 인덱스에 Desktop어쩌구를 넣음)
+		// (0번 인덱스에 Desktop어쩌구를 넣음) 
 		
 		// 그다음 => count : 1 이었을 경우
 		// any = new NoteBook(~~~);

@@ -55,6 +55,7 @@ public class ElectronicShop1 {
 	public Tablet selectTablet() {
 		return tab;
 	}
+	// ()안을 비워둬야하니까 select으로 동일시켜버리기까지하면 오류남 따라서 매개변수가 없으니 이름이라도 다르게!
 	
 	// (복습)
 	// insert 처럼 select도 같은 이름으로 하면 안되는 이유는?
