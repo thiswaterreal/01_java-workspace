@@ -30,6 +30,8 @@ public class StaticMethod {
 	// 4. 매개변수와 반환값이 둘다 있는 메소드
 	public static boolean method4(String str1, String str2) {
 		System.out.println("매개변수와 반환값 둘다 있는 static 메소드 입니다.");
+		// 아래를 한줄로!
+		return str1.equals(str2);
 		
 		/*
 		if(str1.equals(str2)) {
@@ -38,8 +40,6 @@ public class StaticMethod {
 			return false;
 		}
 		*/
-		// 위를 한줄로!
-		return str1.equals(str2);
 		
 	}
 	

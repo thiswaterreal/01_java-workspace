@@ -55,7 +55,7 @@ public class FieldTest1 { // 클래스 영역 시작
 	// 멤버변수 (인스턴스변수) => 전역변수
 	private int global;
 	
-	public void test(int num) { // test 메소드 시작
+	public void test(int num) {
 					// 매개변수(일종의 지역변수. 즉, 메소드 영역 내에서만 쓸 수 있음)
 		
 		// 지역변수(메소드 영역내에 선언) => 지역변수에는 접근제한자 같은거 붙이는거 아님
@@ -68,10 +68,10 @@ public class FieldTest1 { // 클래스 영역 시작
 		System.out.println(num);	// 초기화 안돼있음. 근데 오류 안남. (매개변수로 무조건 하나는 넘어올거니까)
 		
 		// 지역변수 출력
-		System.out.println(local);	// 초기화 안돼있음. 이건 오류남 (따라서 int local = 10; 이렇게 초기화(값지정)해줘야함)
+		System.out.println(local);	// 초기화 안돼있음. int local; 이건 오류남 (따라서 int local = 10; 이렇게 초기화(값지정)해줘야함)
 		
 		
-	} // test 메소드 영역 끝
+	}
 
 
 } // 클래스 영역 끝

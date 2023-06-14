@@ -23,8 +23,8 @@ public class NonStaticMethod {
 	
 	// 1. 매개변수 없고, 반환값도 없는 메소드
 	public void method1() {
-		// return 0; <= void 이기 때문에 반환할 값 없어야 한다.
 		System.out.println("매개변수와 반환값이 둘다 없는 메소드 입니다.");
+		// return 0; <= void 이기 때문에 반환할 값 없어야 한다.
 	}
 	
 	// 2. 매개변수 없고, 반환값은 있는 메소드

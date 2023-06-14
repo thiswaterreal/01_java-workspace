@@ -26,7 +26,7 @@ public class MethodRun {
 		// n.method3();				//불가능. 매개변수 없으면 오류남
 		// n.method3(10); 			//불가능. 매개변수 개수 맞지 않으면 오류남
 		// n.method3("ㅋㅋ","ㅎㅎ");	//불가능. 매개변수 타입 맞지 않으면 오류남
-		// n.method3(10,20);		//불가능. 반환값 없어서 변수에 저장 불가
+		//n.method3(10,20);		//불가능. 반환값 없어서 변수에 저장 불가
 		n.method3(10, 5);
 		n.method3(10, 0);
 		
@@ -54,7 +54,7 @@ public class MethodRun {
 		*/
 		
 		
-		
+		/*
 		// --------------StaticMethod-------------
 		// 생성없이 바로 호출 가능
 		//Math.random();
@@ -67,9 +67,10 @@ public class MethodRun {
 		
 		StaticMethod.method4("apple", "kiwi");
 		System.out.println(StaticMethod.method4("apple", "kiwi")); // return 출력해야만 확인 가능 (sysout으로 찍기)
+		*/
 		
-		
-		
+
+
 		// --------------OverloadingTest-------------
 		OverloadingTest ot = new OverloadingTest();
 		ot.test();
@@ -84,6 +85,8 @@ public class MethodRun {
 		System.out.print("ㅋㅋ");
 		System.out.print(0.5);
 		
+		
 	}
+	
 
 }

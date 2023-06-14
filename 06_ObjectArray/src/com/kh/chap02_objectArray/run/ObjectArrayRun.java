@@ -8,6 +8,7 @@ public class ObjectArrayRun {
 
 	public static void main(String[] args) {
 
+		// (복습)
 		int[] arr = new int[3];
 		
 		arr[0] = 10;

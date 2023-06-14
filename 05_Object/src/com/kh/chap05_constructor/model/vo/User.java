@@ -39,7 +39,7 @@ public class User {
 	}
 	
 	
-	// 2. 매개변수 3개짜리 생성자로 개체 생성 후 정보 출력
+	// 2. 매개변수 3개짜리 생성자로 객체 생성 후 정보 출력
 	// 생성자부
 	public User(String userId, String userPwd, String userName) {
 		// 매개변수 생성자

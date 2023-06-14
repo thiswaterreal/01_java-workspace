@@ -45,7 +45,7 @@ public class FieldRun {
 		System.out.println(Math.PI);
 		//Math.PI = 2.31; //불가능
 		
-		System.out.println(Math.random()); // satatic : 기울임
+		System.out.println(Math.random()); // static : 기울임
 		
 	}
 
