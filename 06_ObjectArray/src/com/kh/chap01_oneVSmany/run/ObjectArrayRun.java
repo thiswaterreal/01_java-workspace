@@ -13,6 +13,7 @@ public class ObjectArrayRun {
 		// 세개의 Book 객체를 관리한다면?
 		Book[] books = new Book[3];
 		
+			
 		// 세개의 도서에 대한 정보를 반복적으로 입력받아 각 인덱스에 객체 생성
 		for(int i=0; i<books.length; i++) {	// for문 시작
 			
@@ -38,7 +39,7 @@ public class ObjectArrayRun {
 			books[2] = new Book(지화자);
 			*/
 			
-			books[i] = new Book(title, author, price, publisher);
+			books[i] = new Book(title, author, price, publisher);	//**
 			
 		} // for문 끝
 		// 객체 생성 끝
@@ -52,7 +53,7 @@ public class ObjectArrayRun {
 		
 		// 전체 도서 정보들 조회하기 => 반복문 활용 가능
 		for(int i=0; i<books.length; i++) {
-			System.out.println(books[i].information());
+			System.out.println(books[i].information());	//**
 		}
 		
 		// 도서 제목으로 검색하는 서비스
@@ -71,7 +72,7 @@ public class ObjectArrayRun {
 		}
 		*/
 		for(int i=0; i<books.length; i++) {
-			if(books[i].getTitle().equals(search)) {
+			if(books[i].getTitle().equals(search)) {	//**
 				System.out.println(books[i].information());
 			}
 		}

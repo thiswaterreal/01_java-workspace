@@ -49,7 +49,7 @@ public class Run {
 		System.out.println("==============================================");
 		//int all = ((total1 + total2 + total3)/3);
 		int all = ((total1 + total2 + total3)/emps.length);
-		
+		System.out.println("평균 연봉 : " + all);
 		
 		
 		/* 누적합을 이용한 방법

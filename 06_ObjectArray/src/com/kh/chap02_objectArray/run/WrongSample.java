@@ -15,9 +15,9 @@ public class WrongSample {
 		arr[1] = new Phone();
 		arr[2] = new Phone();
 		
-		// 값대입
-		for(int i=0; i<arr.length; i++) {	// 0 1 2 
-			System.out.println(arr[i].getName());
+		// 출력
+		for(int i=0; i<arr.length; i++) {	
+			System.out.println(arr[i].getName()); //null null null
 		}
 		
 		// 잘못된 부분
