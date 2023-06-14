@@ -15,7 +15,8 @@ public class WrongSample {
 		arr[1] = new Phone();
 		arr[2] = new Phone();
 		
-		for(int i=0; i<arr.length; i++) {	// 0 1 2 3
+		// 값대입
+		for(int i=0; i<arr.length; i++) {	// 0 1 2 
 			System.out.println(arr[i].getName());
 		}
 		
@@ -25,7 +26,6 @@ public class WrongSample {
 		// 2. ArrayIndexOutOfBoundsException : 배열의 적절한 인덱스 범위를 벗어난 경우
 		// 	  조건식으로 (i<=배열의 길이) 라고 제시되어 있음. 배열의 마지막 인덱스보다 큰 값이 제시
 		//							=> 조치 내용 : 조건식 수정 (i<배열의 길이) '='삭제
-		
 		
 		
 	}
