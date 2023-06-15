@@ -26,7 +26,7 @@ public class DateRun {
 		date1.setDate(24);		// (d)
 		System.out.println(date1.toString());
 		
-		// 3) 요놈이 찐또배기~ 가장 많이 사용
+		// 3) 요놈이 찐또배기~ 가장 많이 사용 *******
 		
 		// 2023년 05월 24일 10시 24분 13초
 		// 내 입맛대로 포맷을 적용해서 출력 가능!!
