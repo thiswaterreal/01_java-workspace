@@ -53,7 +53,7 @@ public class BookController {
 		int month = Integer.parseInt(stn.nextToken());// "07"   --> 7
 		int date = Integer.parseInt(stn.nextToken()); // "01"   --> 1
 		
-		Date publishDate = new Date(year - 1900, month - 1, date);
+		Date publishDate = new Date(year - 1900, month - 1, date);	//**
 		// 2) split 메소드를 이용한 방법
 		// 2_1) split 메소드를 이용하여 먼저 "2020-07-01" 을 각각 문자열로 분리후 String[] 배열에 담기
 		// 2_2) 각 분리된 문자열들이 담겨있는 해당 배열에 인덱스에 접근해서int 변수들에 담기
@@ -110,7 +110,7 @@ public class BookController {
 	// 4. 도서 검색 기능 메소드
 	public void searchBook(String searchTitle) {
 		// 도서 리스트를 전체적으로 조회하면서 (for문 이용)
-		for(int i=0; i< bk.length; i++) {
+		for(int i=0; i<bk.length; i++) {
 			if(bk[i].getTitle().contains(searchTitle)) {
 				System.out.println(bk[i]);
 			}
