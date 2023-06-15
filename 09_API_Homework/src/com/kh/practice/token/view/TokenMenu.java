@@ -8,7 +8,7 @@ import com.kh.practice.token.controller.TokenController;
 public class TokenMenu {
 	
 	private Scanner sc = new Scanner(System.in);
-	private TokenController tc = new TokenController();
+	private TokenController tc = new TokenController();		//**다형성??**
 	
 	public void mainMenu() {
 		/*
