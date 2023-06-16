@@ -8,7 +8,7 @@ public class FileRun {
 	public static void main(String[] args) {
 
 		// 메모리는 휘발성임
-		// 가나다라 라고 쓰고 컴퓨터를 끄면 지워짐! => 
+		// 가나다라 라고 쓰고 컴퓨터를 끄면 지워짐!
 		// 기록하기 위해 파일이 필요함
 		
 		// 간단하게 파일(File) 만들어지는 과정
@@ -40,11 +40,11 @@ public class FileRun {
 			// 실행할때마다 파일이 계속 만들어지나요?
 			// 해당 파일 존재하면 그냥 덮어쓰기 된다. 수정사항 없으면 그대로 감
 			
-			System.out.println(f1.exists()); 	// 파일 존재 확인
-			System.out.println(new File("ttt.text").exists());
+			System.out.println(f1.exists()); 					// 파일 존재 확인
+			System.out.println(new File("ttt.text").exists());	//true
 			
-			System.out.println(f1.isFile());	// 이거 파일이냐?
-			System.out.println(tempFolder.isFile());
+			System.out.println(f1.isFile());					// 이거 파일이냐?
+			System.out.println(tempFolder.isFile());			//false
 			
 			// ----------------------------------------------------------------------------
 			

@@ -48,12 +48,6 @@ public class FileCharDao {
 				fw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-			} finally {	// 3. 반납!!
-				try {
-					fw.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
 			}
 		}
 		
