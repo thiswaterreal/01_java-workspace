@@ -51,6 +51,7 @@ public class ObjectDao {
 		//ObjectInputStream ois = new ObjectInputStream(new FileInputStream("d_phone.txt")); <= 이거 쓰고, 예외처리
 		
 		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("d_phone.txt"))) {
+		
 		/*	
 		System.out.println(ois.readObject());	// Phone [name=아이폰, price=1300000]
 		System.out.println(ois.readObject());	// Phone [name=갤럭시, price=1200000]
