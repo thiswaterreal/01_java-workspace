@@ -31,12 +31,13 @@ public class MathRun {
 		System.out.println("가장 가까운 정수값 : " + Math.rint(num2)); 	// 4.0
 		
 		// 제곱근(루트) : sqrt
-		System.out.println("4의 제곱근 : " + Math.sqrt(num2));			// 2.0
+		System.out.println("4의 제곱근 : " + (int)Math.sqrt(num2));			// 2.0
 		
 		// 제곱 : pow
 		System.out.println("2의 10제곱 : " + Math.pow(2, 10));	 	// 1024.0
 		
 		// Math m = new Math();
+	
 		
 		/*
 		 * * Math 특징

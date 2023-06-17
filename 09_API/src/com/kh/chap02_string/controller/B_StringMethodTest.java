@@ -3,6 +3,7 @@ package com.kh.chap02_string.controller;
 public class B_StringMethodTest {
 
 	public void method() {
+		
 		String str1 = "Hello World";
 		
 		// 메소드명(매개변수) : 반환형
@@ -10,13 +11,12 @@ public class B_StringMethodTest {
 		// 1. 문자열.charAt(int index) : char형으로 반환(뱉음)
 		//	  문자열에서 전달받은 index 위치의 문자만을 추출해서 리턴
 		char ch = str1.charAt(3);
-		System.out.println("ch : " + ch);
+		System.out.println("ch : " + ch);		// l
 		
 		// 2. 문자열.concat(String str) : String
 		//	  문자열과 전달된 또 다른 문자열을 하나로 합쳐서 새로운 문자열로 리턴
 		String str2 = str1.concat("!!!");
-		System.out.println("str2 : " + str2);
-		
+		System.out.println("str2 : " + str2);	// Hello World!!!
 		
 		//System.out.println(str1); // 바뀌진 않음 그대로 Hello World
 		
@@ -46,7 +46,7 @@ public class B_StringMethodTest {
 		//				=> 문자열의 beginIndex 위치에서부터 ~ endIndex -1 위치까지 출력
 		// Hello World
 		System.out.println(str1.substring(3));		// lo World // 3번째 인덱스 뒤부터 출력
-		System.out.println(str1.substring(3, 7));	// lo W 	//3인덱스 뒤부터 ~ 7인덱스 앞까지 출력
+		System.out.println(str1.substring(3, 7));	// lo W 	// 3인덱스 뒤부터 ~ 7인덱스 앞까지 출력
 		
 		// Hello만 추출해보기
 		System.out.println(str1.substring(0, 5));	// Hello 	// (begin <= 출력 < end)

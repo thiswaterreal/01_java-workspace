@@ -13,8 +13,8 @@ public class A_UncheckedException {
 	 * - IndexOutOfBoundsException : 부적절한 인덱스를 가지고 접근시 발생되는 예외
 	 * - NullPointerException : 참조변수가 null로 초기화된 상황에서 null에 접근했을때 발생되는 예외
 	 * - ArithmeticException : 나누기 연산시 0으로 나누려 할 때 발생되는 예외
-	 * - ClassCastException : 허용할 수 없는 형변환이 진행될 떄 발생되는 예외
-	 * - NegativeArraySizeException : 배열 할당 과정에서 배열의 크기를 음수로 지정하는 경우 발생되는 예외
+	 * - ClassCastException : 허용할 수 없는 형변환이 진행될 때 발생되는 예외
+	 * - NegativeArraySizeException : 배열 할당 과정에서 배열의 크기를 음수(-)로 지정하는 경우 발생되는 예외
 	 * 
 	 * => RuntimeException 관련된 예외는 충분히 예측가능한 상황이 있음
 	 * 	  아싸리 애초에 예외 발생이 안되게끔 if문으로 조건처리 가능
@@ -123,10 +123,9 @@ public class A_UncheckedException {
 			int size = sc.nextInt();
 			int[] arr = new int[size];
 			System.out.println("100번 인덱스 값 : " + arr[100]);
-		}catch(InputMismatchException e) {	// 부모에 의해서 얘는 실행이 안됨. 순서가 중요!!
-											
+		}catch(InputMismatchException e) {	// 부모에 의해서 얘는 실행이 안됨. 순서가 중요!!					
 			System.out.println("정수가 아닌 값을 입력하셨습니다.");
-		}catch(RuntimeException e) {	// 다형성 적용해서 부모타입 예외클래서 작성 가능
+		}catch(RuntimeException e) {	// 다형성 적용해서 부모타입 예외클래스 작성 가능
 										// 모든 자식 예외 발생시 다 받아서 처리할 수 있음
 			System.out.println("예외가 발생되긴 했음.. 배열의 크기가 잘못됐던가, 부적잘한 인덱스가 제시됐던가.. 정수로 입력을 안했던가");
 		}
@@ -136,7 +135,7 @@ public class A_UncheckedException {
 		
 		/*
 		 * RuntimeException 관련애들은 UnCheckedException (예외처리구문이 필수는 아님)
-		 * if문 : 애초에 예외자체가 발생되기 전에 소스코드로 핸들링 하는 것임 (예외처리구문이 아님)
+		 * if문 : 애초에 예외자체가 발생되기 '전'에 소스코드로 핸들링 하는 것임 (예외처리구문이 아님)
 		 * try-catch문 : 예외가 '발생'했을경우, 처리해주는 구문을 작성해두는 것
 		 * 
 		 * 예측가능한 상황은 if문으로 조건검사로 해결하는게 권장사항임!
