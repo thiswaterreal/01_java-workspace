@@ -16,6 +16,11 @@ public abstract class Sports {
 		this.people = people;
 	}
 	
+	public void printRule() {// 부모(공통)룰
+		System.out.print("시작합니다..");
+		rule();
+	}
+	
 	
 	@Override
 	public String toString() {

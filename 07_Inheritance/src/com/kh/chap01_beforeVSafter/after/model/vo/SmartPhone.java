@@ -6,9 +6,9 @@ public class SmartPhone extends Product { // 상속받
 	
 	public SmartPhone() {}
 	
-	// **
+	
 	public SmartPhone(String brand, String pCode, String pName, int price, String mobileAgency) {
-		super(brand, pCode, pName, price);
+		super(brand, pCode, pName, price); //**
 		this.mobileAgency = mobileAgency;
 	}
 	

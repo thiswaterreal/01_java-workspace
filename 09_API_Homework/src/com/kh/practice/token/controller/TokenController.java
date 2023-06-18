@@ -38,9 +38,11 @@ public class TokenController {
 		char[] arr = input.toCharArray();			// a p p l i c a t i o n
 		char ch = input.toUpperCase().charAt(0);	// A
 		arr[0] = ch;								// A p p l i c a t i o n
-        return input.valueOf(arr);					// Appliction
-	
-	}		//** 여기서 String안쓰고 input써도 돌긴 돌아..왜?? 그럼 String 쓰는 이유는 뭐야?
+        return String.valueOf(arr);					// Appliction
+	}		
+	//** 여기서 String안쓰고 input써도 돌긴 돌아..왜?? 그럼 String 쓰는 이유는 뭐야?
+	// input도 String 기능이 있어서 가능한것같아.. 나옹
+	// 11. String.valueof(char[] data) : String
 	
 	// .toCharArray(); => 문자열을 한 글자씩 쪼개서 이를 char타입의 배열에 집어넣어주는 메소드
 	// .valueOf();	   => 쪼갰던거 합치기

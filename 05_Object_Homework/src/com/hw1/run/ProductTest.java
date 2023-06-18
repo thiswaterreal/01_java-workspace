@@ -6,9 +6,9 @@ public class ProductTest {
 
 	public static void main(String[] args) {
 		
-		// Product p1 = new Product(); <= 이런 형식이 기본생성자 이용한것임
+		// Product p1 = new Product(); <= 이런 형식이 '기본생성자를 이용한 객체생성'
 		
-		// 매개변수 생성자를 이용하여 3개의 객체 생성 (위의 사용 데이터 참고)
+		// '매개변수 생성자를 이용하여 3개의 객체 생성' (위의 사용 데이터 참고)
 		// 객체가 가진 필드 값 출력 확인
 		Product p1 = new Product("ssgnote9", "갤럭시노트9", "경기도 수원", 960000, 10.0);
 		Product p2 = new Product("lgxnote5", "LG스마트폰5", "경기도 평택", 780000, 0.7);

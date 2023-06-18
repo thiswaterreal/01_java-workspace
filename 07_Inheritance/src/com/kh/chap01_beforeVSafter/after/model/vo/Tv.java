@@ -6,9 +6,9 @@ public class Tv extends Product { // 상속받
 	
 	public Tv() {}
 	
-	// **
+	
 	public Tv(String brand, String pCode, String pName, int price, int inch) {
-		super(brand, pCode, pName, price);
+		super(brand, pCode, pName, price);	//**
 		this.inch = inch;
 	}
 	

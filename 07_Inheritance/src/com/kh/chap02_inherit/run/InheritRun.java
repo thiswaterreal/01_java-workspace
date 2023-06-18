@@ -36,10 +36,12 @@ public class InheritRun /*extends Object*/ {
 		 * 		=> 뿐만 아니라 오버라이딩을 통해 재정의도 가능함
 		 */
 		
+		
 		System.out.println(c.hashCode());
 		System.out.println(c.equals(s)); 		// false. 그럼 부모가 2명인가요? (Object 클래스는 할머니할아버지 느낌)
 		System.out.println(c/*.toString()*/); 	// 여태 toString이 자동으로 호출되어 주소값이 호출됐던것임
 		System.out.println(c.toString());
+		
 	}
 
 }
