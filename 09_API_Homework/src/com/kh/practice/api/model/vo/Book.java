@@ -8,7 +8,7 @@ public class Book {
 	private String title;
 	private String author;
 	private String publisher;
-	private Date publishDate;
+	private Date publishDate; //**
 	private int price;
 	
 	public Book() {}
@@ -54,7 +54,7 @@ public class Book {
 	@Override
 	public String toString() {
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 mm월 dd일");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 mm월 dd일");  //**
 		
 		return "Book [title=" + title + ", author=" + author + ", publisher=" + publisher + ", publishDate="
 				+ sdf.format(publishDate) + ", price=" + price + "]";

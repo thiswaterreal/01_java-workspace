@@ -33,8 +33,10 @@ public class Run {
 		
 		System.out.print("가격을 입력하시오 : ");
 		String newPrice = sc.nextLine();
+		
 		// 2_2. 입력받은 값들을 BookController의 insertBook() 메소드로 전달
 		bc.insertBook(newTitle, newAuthor, newPublisher, newDate, newPrice);
+		System.out.println("추가도서 추가완료!");
 		
 		
 		
@@ -48,7 +50,7 @@ public class Run {
 		System.out.print("검색할 도서명을 입력하시오 : ");
 		String searchTitle = sc.nextLine();
 		
-		bc.searchBook(searchTitle);
+		bc.searchBook(searchTitle); 	//** 메소드 실행하여 출력????
 		
 		
 	}

@@ -14,11 +14,11 @@ public class BookControllerTeacher {
    private Book[] list = new Book[5];
    // 각각의 인덱스에 접근하여 샘플 데이터 넣어서 객체 생성
    {
-      list[0] = new Book("자바의 정석", "차은우", "나무", new Date(2023-1900, 6-1,14 ), 10000);
-      list[1] = new Book("여러분 파이팅", "주지훈", "사과", new Date(2023-1900, 5-1,11 ), 20000);
-      list[2] = new Book("API의 모든것", "문동은", "오렌지", new Date(2020-1900, 4-1,25 ), 35000);
-      list[3] = new Book("언어의 천재", "장원영", "키위", new Date(2015-1900, 1-1,1 ), 70000);
-      list[4] = new Book("개발왕국", "시연쌤", "바나나", new Date(2022-1900, 12-1,25 ), 80000);
+      list[0] = new Book("자바의 정석", "차은우", "나무", new Date(2023-1900, 6-1, 14), 10000);
+      list[1] = new Book("여러분 파이팅", "주지훈", "사과", new Date(2023-1900, 5-1,11), 20000);
+      list[2] = new Book("API의 모든것", "문동은", "오렌지", new Date(2020-1900, 4-1, 25), 35000);
+      list[3] = new Book("언어의 천재", "장원영", "키위", new Date(2015-1900, 1-1, 1), 70000);
+      list[4] = new Book("개발왕국", "시연쌤", "바나나", new Date(2022-1900, 12-1, 25), 80000);
    }
    
    private Book[] newList = Arrays.copyOf(list, 6);

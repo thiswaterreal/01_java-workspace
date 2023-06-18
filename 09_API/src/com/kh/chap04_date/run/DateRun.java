@@ -16,6 +16,7 @@ public class DateRun {
 		System.out.println(date1);
 		
 		// 내가 원하는 날짜 (2023년 05월 24일)로 셋팅
+		
 		// 1) 매개변수 생성자를 통해서 생성하는 방법
 		Date date2 = new Date(2023-1900, 5-1, 24);
 		System.out.println(date2);
@@ -26,12 +27,10 @@ public class DateRun {
 		date1.setDate(24);		// (d)
 		System.out.println(date1.toString());
 		
-		// 3) 요놈이 찐또배기~ 가장 많이 사용 *******
-		
+		// 3) 요놈이 찐또배기!! 가장 많이 사용 *******
 		// 2023년 05월 24일 10시 24분 13초
 		// 내 입맛대로 포맷을 적용해서 출력 가능!!
 		// java.text.SimpleDateFormat 클래스
-		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 hh시 mm분 ss초");
 		String formatDate = sdf.format(date1);
 		System.out.println(formatDate);

@@ -101,6 +101,9 @@ public class WrapperRun {
 		
 		String strI = String.valueOf(i);		// 문자열 "10"
 		String strD = String.valueOf(d);		// 문자열 "15.3"
+		
+		System.out.println(strI + strD);
+		
 		// 근데 이렇게는 많이 안씀..
 		String test = i + "";	// 다른자료형 + 문자열 => 문자열
 		
