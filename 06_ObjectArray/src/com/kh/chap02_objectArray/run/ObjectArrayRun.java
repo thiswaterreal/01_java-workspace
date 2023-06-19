@@ -8,6 +8,7 @@ public class ObjectArrayRun {
 
 	public static void main(String[] args) {
 
+		/*
 		// (복습)
 		int[] arr = new int[3];
 		
@@ -19,6 +20,7 @@ public class ObjectArrayRun {
 		for(int i=0; i<arr.length; i++) {
 			System.out.println(arr[i]);
 		}
+		*/
 		
 		////////////////// 여기부터 시작 ////////////////////
 		
