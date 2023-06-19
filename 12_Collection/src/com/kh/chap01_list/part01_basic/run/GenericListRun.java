@@ -1,5 +1,6 @@
 package com.kh.chap01_list.part01_basic.run;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,12 +23,15 @@ public class GenericListRun {
 		
 		List<Music> sub = list.subList(0, 2);
 		// subList 쓸 때는 거의 항상 '제네릭'설정 함
-		System.out.println(sub);
+		System.out.println(sub);	// 2개 뽑아,
 		
 		list.addAll(sub);
+		System.out.println(list);	// 원본(3개) 바로 뒤에 + 뽑은(2개) 붙여 
 		
 		Music m = list.get(0); 
 		// 제네릭했기 때문에 변수에 담을때 어차피 Music형이기 때문에 따로 형변환 할 필요가 없어짐!!
+		// 안그랬으면 list.get(0); 이 Object형으로 뱉어서 형변환 해서 담았어야함 (양쪽 형이 같아야하니까)
+		// 강제형변환 : Music m = (Music)list.get(0);
 		System.out.println(m);
 		System.out.println(list.get(0).getArtist());
 		
@@ -42,7 +46,9 @@ public class GenericListRun {
 		 */
 		
 		
-		
+		// 06_ObjectArray/chap02/run/ArrayListRun(Phone)
+		// 06_ObjectArray_Homework/run/ArrayListRun(Employee)
+		// 07_Inheritance/chap02/run/ArrayListRun(Vehicle)
 		
 		
 	}

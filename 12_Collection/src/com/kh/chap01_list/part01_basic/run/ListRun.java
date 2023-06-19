@@ -95,7 +95,7 @@ public class ListRun {
 		System.out.println(sub);
 		
 		
-		// 8. addAll(Collect c) : 컬렉션을 통째로 뒤에 추가시켜주는 메소드
+		// 8. addAll(Collection c) : 컬렉션을 통째로 뒤에 추가시켜주는 메소드
 		list.addAll(sub);
 		System.out.println(list);
 		

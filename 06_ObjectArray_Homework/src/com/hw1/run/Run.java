@@ -34,7 +34,6 @@ public class Run {
 			System.out.println("emp[" + i + "] : " + emps[i].information());
 		}
 		
-		
 		// 직원 각각의 보너스가 적용된 1년 연봉을 계산하여 출력		
 		// 보너스가 적용된 연봉 = (급여 +(급여 * 보너스 포인트)) * 12
 		System.out.println("==============================================");
@@ -50,7 +49,6 @@ public class Run {
 		//int all = ((total1 + total2 + total3)/3);
 		int all = ((total1 + total2 + total3)/emps.length);
 		System.out.println("평균 연봉 : " + all);
-		
 		
 		/* 누적합을 이용한 방법
 		// 직원 각각의 보너스가 적용된 1년 연봉을 계산하여 출력		
