@@ -16,15 +16,18 @@ public class MusicController {
 		list.add(new Music("새삥 말고 헌삥", "김시연"));
 	}
 	
+	// 1. 곡 추가 (add)
 	public void insertMusic(String title, String artist) {
 		list.add(new Music(title, artist));				// **쿠키,뉴진스가 새삥,지코 그 다음으로 추가됨 (Zoom 2:18)
 	}
 	
+	// 2. 전체곡 조회 (return)
 	public ArrayList<Music> selectMusic() {		// return쓰기위해 자료형 지정해주자! void => ArrayList<Music>
 		// 돌려준다 => return
 		return list;
 	}
 	
+	// 3. 특정곡 삭제 (remove)
 	public int deleteMusic(String title) {
 		
 		int result = 0;	// 삭제전
@@ -39,6 +42,7 @@ public class MusicController {
 		return result; // **반환하는 result 자료형이 int 니까 void => int로 변경~
 	}
 	
+	// 4. 특정곡 검색 (keyword contain)
 	public ArrayList<Music> searchMusic(String keyword) {
 		
 		ArrayList<Music> searchList = new ArrayList<>();	// []
@@ -50,10 +54,9 @@ public class MusicController {
 		}
 		// searchList => 텅 비어있을 수도 있음 or 검색된 Music 객체들이 담겨있을 수도 있음
 		return searchList; 	// 잘 담았으니 return => searchList의 반환형을 void 자리에 작성
-		
 	}
 	
-	// 2. 심화버전
+	// 4. (심화버전)
 	public ArrayList<Music> searchMusic(int menu, String keyword) {
 		
 		ArrayList<Music> searchList = new ArrayList<>();	// []
@@ -74,6 +77,7 @@ public class MusicController {
 		return searchList;
 	}
 	
+	// 5. 특정곡 수정 (.set--)
 	public int updateMusic(String title, String upArtist, String upTitle) {
 		
 		int result = 0;
