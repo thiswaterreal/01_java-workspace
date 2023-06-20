@@ -14,10 +14,11 @@ public class MusicController {
 		list.add(new Music("새삥말고헌삥", "수쟌"));
 	}
 	
+	
 	// 1. 곡 추가 (add)
 	public void insertMusic(String title, String artist) {
-		list.add(new Music(title, artist));
-	}
+		list.add(new Music(title, artist));		// Music객체생성
+	} //다시돌아감
 	
 	// 2. 전체곡 조회 (return)
 	public ArrayList<Music> selectMusic() {
@@ -29,7 +30,7 @@ public class MusicController {
 		int result = 0;
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i).getTitle().equals(title)) {
-				list.remove(i);
+				list.remove(i);	//** 해당 인덱스 삭제
 				result = 1;
 				break;
 			}
@@ -40,17 +41,18 @@ public class MusicController {
 	// 4. 특정곡 검색 (keyword contain)
 	public ArrayList<Music> searchMusic(String keyword) {
 		
-		ArrayList<Music> searchList = new ArrayList<>();
+		ArrayList<Music> searchList = new ArrayList<>(); //[] 
+		//** 내가 검색한 키워드들만 싹 모아놓은 리스트!! 따로 맹근 것! (zoom 3:10)
 		
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i).getTitle().contains(keyword)) {
-				searchList.add(list.get(i));
+				searchList.add(list.get(i)); //** 내가 찾은 그것 텅빈 서치리스트에 추가!
 			}
 		}
 		return searchList;
 	}
 	
-	// 4. (심화버전)
+	// 4. (심화버전)_메소드 오버로딩 매개변수 다르니까
 	public ArrayList<Music> searchMusic(int menu, String keyword) {
 		
 		ArrayList<Music> searchList = new ArrayList<>();
@@ -61,7 +63,7 @@ public class MusicController {
 					searchList.add(list.get(i));
 				}
 			}
-		}else {
+		}else { // menu == 2(가수명)
 			for(int i=0; i<list.size(); i++) {
 				if(list.get(i).getArtist().contains(keyword)) {
 					searchList.add(list.get(i));
@@ -90,7 +92,9 @@ public class MusicController {
 	
 	// [의문..] 
 	
-	// 언제 result 활용한 값 반환하고, 언제 ArrayList<>형 list인 값 반환하나??
+	// 언제 ArrayList<>형 list인 값 반환하고, 언제 result 활용한 값 반환하나 ??
+	// 전체리스트 첫조회(list), 검색결과만모아놓은리스트 첫조회(searchList)
+	// 나머지때는 0,1로 결과나누고 리스트 보여주고 싶으면 selectMusic()메소드 호출?
 	
 	/* [ArrayList<>형인 list 반환]
 	// 3. 특정곡 삭제 (remove)
@@ -99,16 +103,16 @@ public class MusicController {
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i).getTitle().equals(title)) {
 				list.remove(i);
-				
 			}
 		}
 		return list;
 	}
 	*/
 	
-	/* [result 활용한 값 반환]
+	/* [int형인 result 활용한 값 반환]
 	// 3. 특정곡 삭제 (remove)
 	public int deleteMusic(String title) {
+	
 		int result = 0;
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i).getTitle().equals(title)) {

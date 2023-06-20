@@ -14,7 +14,7 @@ import com.kh.chap01_list.part02_mvc.model.vo.Music;
  */
 public class MusicMenu {
 	
-	// 전역으로
+	// 전역으로 (단, 여기 뒷단에서만 쓰려고 private을 붙인다)
 	private MusicController mc = new MusicController();
 	private Scanner sc = new Scanner(System.in);
 	// 메인화면 : 프로그램 실행시 처음 보여주는 화면
@@ -78,6 +78,7 @@ public class MusicMenu {
 		mc.insertMusic(title, artist);
 		
 		System.out.println("곡 추가가 완료되었습니다.");
+		
 	}
 	
 	/** 
@@ -85,16 +86,17 @@ public class MusicMenu {
 	 */
 	public void selectMusic() {
 		System.out.println("\n============= 전체 곡 조회 (곡이 있거나, 없거나) =============");
-		
+	
 		ArrayList<Music> list = mc.selectMusic();	//**
 	
 		if(list.isEmpty()) {
 			System.out.println("존재하는 곡이 없습니다.");
 		}else {
 			for(int i=0; i<list.size(); i++) {
-				System.out.println(list.get(i));
+				System.out.println(list.get(i));	//**sysout(list) ??
 			}
 		}
+		
 	}
 	
 	/** 
@@ -105,7 +107,7 @@ public class MusicMenu {
 		
 		System.out.print("삭제할 곡명 : ");
 		String title = sc.nextLine();
-		
+	
 		int result = mc.deleteMusic(title);	//**
 		
 		if(result == 0) {
@@ -121,13 +123,15 @@ public class MusicMenu {
 	 */
 	public void searchMusic() {
 		System.out.println("\n============= 특정 곡 검색 (곡을 검색하여 찾았거나, 못찾았거나) =============");
-		/* 1. 기본버전
+		
+
+		/* 1. 간단버전
 		System.out.print("검색할 곡명 (키워드) : ");
 		String keyword = sc.nextLine();
 		
 		ArrayList<Music> searchList = mc.searchMusic(keyword);
 		*/
-		
+	
 		// 2. 심화버전
 		System.out.println("1) 제목으로 검색");
 		System.out.println("2) 가수명으로 검색");
@@ -148,6 +152,7 @@ public class MusicMenu {
 				System.out.println(searchList.get(i));
 			}
 		}
+		
 		
 	}
 	
@@ -174,7 +179,6 @@ public class MusicMenu {
 			System.out.println("수정을 완료하였습니다.");
 			selectMusic();
 		}
-		
 	}
 	
 	
@@ -196,7 +200,7 @@ public class MusicMenu {
 	}
 	*/
 	
-	/* [result 활용한 값 반환]
+	/* [int형인 result 활용한 값 반환]
 	// 3.
 	public void deleteMusic() {
 		System.out.println("\n============= 특정 곡 삭제 (삭제할 곡을 발견했거나, 못했거나) =============");
