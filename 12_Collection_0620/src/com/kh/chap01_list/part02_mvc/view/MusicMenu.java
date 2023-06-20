@@ -86,9 +86,9 @@ public class MusicMenu {
 	public void selectMusic() {
 		System.out.println("\n============= 전체 곡 조회 (곡이 있거나, 없거나) =============");
 		
-		/*
+
 		ArrayList<Music> list = mc.selectMusic();
-		// 밑에 요렇게 하려고 담는건가..?
+	
 		
 		if(list.isEmpty()) {
 			System.out.println("현재 존재하는 곡이 없습니다.");
@@ -97,10 +97,7 @@ public class MusicMenu {
 				System.out.println(list.get(i));
 			}
 		}
-		*/
-		
-		mc.selectMusic();
-		System.out.println(mc.selectMusic());
+	
 		
 	}
 	

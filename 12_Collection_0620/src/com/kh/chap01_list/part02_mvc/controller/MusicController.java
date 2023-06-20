@@ -31,7 +31,7 @@ public class MusicController {
 		int result = 0;
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i).getTitle().equals(title)) {
-				list.remove(i);
+				list.remove(i); //**
 				result = 1;
 				break; //**
 			}
@@ -46,8 +46,8 @@ public class MusicController {
 		
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i).getTitle().contains(keyword)) {
-				searchList.add(list.get(i));
-			}
+				searchList.add(list.get(i));	//** 전체리스트 중에서 (뭘 찾아서, 뭘 원해서) 뽑은것을 따로 담아 반환,출력하고 싶으니께
+			}									//** 전체리스트 활용 => 또 다른 리스트 생성
 		}
 		return searchList;
 	}
