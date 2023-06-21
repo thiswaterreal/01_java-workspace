@@ -133,7 +133,7 @@ public class FileByteDao {
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (IOException e) {	// while문 예외처리되어 catch블럭 추가됨
 			e.printStackTrace();
 		} finally {
 			// 3. 다 사용한 스트림 반납 => 예외처리까지 하면 완벽!

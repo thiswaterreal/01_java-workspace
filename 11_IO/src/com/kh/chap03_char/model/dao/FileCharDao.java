@@ -64,29 +64,29 @@ public class FileCharDao {
 			
 			// 2. read 메소드 이용해서 읽어들이자 (정수값 반환함)
 			//	  파일의 끝을 만나는 순간 -1 출력
+			
 			int value = 0;
-			while((value = fr.read()) != -1) {	// 예외처리 : catch블럭 add (두번째)
-				System.out.print((char)value);	// 형변환 (int숫자 -> char문자)
+			while((value = fr.read()) != -1) {
+				System.out.println((char)value);
 			}
 			
+			/*int value = 0;
+			while((value = fr.read()) != -1) {	// 예외처리 : catch 블럭 추가_add(두번째)
+				System.out.print((char)value);	// 형변환 (int숫자 -> char문자)
+			}
+			*/
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (IOException e) {	// while문 예외처리되어 catch블럭 추가됨
 			e.printStackTrace();
-		} finally {	// 3. 반납하기!! (+예외처리)
+		}  finally {	// 3. 반납하기!! (+예외처리)
 			try {
 				fr.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		
 	}
-	
-	
-	
-	
-	
 	
 }

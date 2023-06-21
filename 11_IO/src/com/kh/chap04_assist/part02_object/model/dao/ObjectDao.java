@@ -47,8 +47,7 @@ public class ObjectDao {
 	// 프로그램 <--------- 파일 : '입력'
 	public void fileRead() {
 		
-		
-		//ObjectInputStream ois = new ObjectInputStream(new FileInputStream("d_phone.txt")); <= 이거 쓰고, 예외처리
+		// 객체 단위로 입력받을 수 있는 보조스트림 필요!
 		
 		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("d_phone.txt"))) {
 		
