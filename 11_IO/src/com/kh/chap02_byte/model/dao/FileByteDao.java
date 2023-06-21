@@ -62,7 +62,7 @@ public class FileByteDao {
 			e.printStackTrace();
 		} finally {	// 이 안에 작성된 코드는 어떤 예외가 발생했던간에 마지막에 무조건 실행하고 빠져나갈것임 => 예외처리까지 하면 완벽!
 			try {
-				// 3. 스트림 다 사용했으면 반납하기!! (반드시!!!!!!!!!!!)
+				// 3. 스트림 다 사용했으면 반납하기!! (+예외처리)
 				fout.close();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -104,7 +104,8 @@ public class FileByteDao {
 			// 실제로 파일에 얼마만큼의 데이터가 있는지 모를 경우 => 반복문 활용
 			// 위를 반복문으로!
 			
-			/* (문제발생) 반복문 수행시 매번 read()가 두번씩 실행되게 때문에 퐁당퐁당 읽어들여짐 (zoom/12:08) => 잘못됨
+			/* (문제발생)
+			 * 반복문 수행시 매번 read()가 두번씩 실행되게 때문에 퐁당퐁당 읽어들여짐 
 			while(fin.read() != -1) {	// 읽어들인 값이 -1이 아닐 경우에만 반복적으로 실행하도록
 				System.out.println(fin.read());
 			}
@@ -123,9 +124,11 @@ public class FileByteDao {
 			*/
 			
 			// 해결방법2. (요놈을 권장)
+			// 파일의 끝을 만나는 순간 -1 출력 
+			// 읽어들인 값이 -1이 아닐 경우에만 반복적으로 실행하도록
 			int value = 0;
 			while((value = fin.read()) != -1) {		// 예외처리 : catch블럭 add (두번째)
-				System.out.println((char)value); 	//char로 형변환하면 97 => 'a' 로 출력
+				System.out.println((char)value); 	// 형변환 (int)97 => (char)'a' 로 출력
 			}
 			
 		} catch (FileNotFoundException e) {

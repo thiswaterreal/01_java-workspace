@@ -23,8 +23,7 @@ public class FileCharDao {
 		
 		// FileWriter : 파일로 데이터를 2바이트 단위로 출력할 수 있는 스트림
 		
-		FileWriter fw = null;
-		
+		FileWriter fw = null;		
 		try {
 			// 1. FileWriter 객체 생성
 			fw = new FileWriter("b_char.txt"/*, false or true*/);	// 해당 파일이 없으면 새로 만들고 연결, 있으면 그냥 연결
@@ -43,9 +42,9 @@ public class FileCharDao {
 		
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
+		} finally {  // 3. 반납하기 (+예외처리)
 			try {
-				fw.close();
+				fw.close();	
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -67,7 +66,7 @@ public class FileCharDao {
 			//	  파일의 끝을 만나는 순간 -1 출력
 			int value = 0;
 			while((value = fr.read()) != -1) {	// 예외처리 : catch블럭 add (두번째)
-				System.out.print((char)value);	// 형변환 (숫자 -> 문자)
+				System.out.print((char)value);	// 형변환 (int숫자 -> char문자)
 			}
 			
 			
@@ -75,7 +74,7 @@ public class FileCharDao {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {	// 3. 반납!!
+		} finally {	// 3. 반납하기!! (+예외처리)
 			try {
 				fr.close();
 			} catch (IOException e) {

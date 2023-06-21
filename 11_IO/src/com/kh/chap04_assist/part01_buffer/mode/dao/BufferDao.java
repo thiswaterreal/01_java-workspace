@@ -35,7 +35,6 @@ public class BufferDao {
 		/*
 		// 위 두줄을 한줄로!
 		BufferedWriter bw = null; 
-		//bw = new BufferedWriter(new FileWriter("c_buffer.txt")); <= 이렇게 적고 예외처리하면 아래처럼 나옴
 		try {
 			bw = new BufferedWriter(new FileWriter("c_buffer.txt"));
 			
@@ -70,8 +69,7 @@ public class BufferDao {
 		 * }
 		 */
 		
-		//BufferdWriter bw = new BufferedWriter(new FileWriter("c_buffer.txt")); <= 이거 쓰고, 예외처리
-		
+		// 1~2. 기반스트림 객체 생성 => 객체 전달하면서 => 보조스트림 생성
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter("c_buffer.txt"))) {
 			// write 메소드 이용해서 데이터 출력
 			bw.write("안녕하세요\n");
@@ -80,7 +78,7 @@ public class BufferDao {
 			bw.write("저리가세요");
 		} catch (IOException e) {
 			e.printStackTrace();
-		}	// 자원반납 구문 안써도 됨. 자동으로 반납까지 해줄것임
+		}	// 자원반납 구문 안써도 됨. 자동으로 스트림 반납까지 해줄것임
 		
 	
 	}
