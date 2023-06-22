@@ -17,6 +17,7 @@ public class MusicMenu {
 	// 전역으로 (단, 여기 뒷단에서만 쓰려고 private을 붙인다)
 	private MusicController mc = new MusicController();
 	private Scanner sc = new Scanner(System.in);
+	
 	// 메인화면 : 프로그램 실행시 처음 보여주는 화면
 	public void mainMenu() {
 		
@@ -93,7 +94,7 @@ public class MusicMenu {
 			System.out.println("존재하는 곡이 없습니다.");
 		}else {
 			for(int i=0; i<list.size(); i++) {
-				System.out.println(list.get(i));	//**sysout(list) ??
+				System.out.println(list.get(i));	
 			}
 		}
 		

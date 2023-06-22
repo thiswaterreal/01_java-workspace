@@ -2,7 +2,6 @@ package com.kh.library.controller;
 
 import java.util.ArrayList;
 
-
 import com.kh.library.model.vo.Book;
 import com.kh.library.model.vo.Magazine;
 
@@ -12,7 +11,7 @@ public class BookController implements BookManager {
 	ArrayList<Book> bList = new ArrayList<>();	//**
 	
 	@Override
-	public void addBook(Book nBook) { // 추가하기
+	public void addBook(Book nBook) { // 0. 처음(all추가)
 		bList.add(nBook);
 	}
 
@@ -52,8 +51,8 @@ public class BookController implements BookManager {
 
 	      ArrayList<Book> tempB = new ArrayList<>();
 	      
-	      for (Book b : bList) {
-	         if (b instanceof Magazine)
+	      for(Book b : bList) {
+	         if(b instanceof Magazine)
 	            continue;
 	         else
 	            tempB.add(b);
@@ -75,7 +74,7 @@ public class BookController implements BookManager {
 	   }
 
 	@Override
-	public ArrayList<Book> magazineOfThisYearInfo(int year) {
+	public ArrayList<Book> magazineOfThisYearInfo(int year) {  // 3-3. 출간연도로 잡지 찾기
 		
 		ArrayList<Book> searchYear = new ArrayList<>();
 		
@@ -99,7 +98,7 @@ public class BookController implements BookManager {
 	}
 
 	@Override
-	public ArrayList<Book> searchBookByPublisher(String publisher) {
+	public ArrayList<Book> searchBookByPublisher(String publisher) {  // 3-4. 출판사로 책 찾기
 		
 		ArrayList<Book> searchPublisher = new ArrayList<>();
 		
@@ -112,7 +111,7 @@ public class BookController implements BookManager {
 	}
 
 	@Override
-	public ArrayList<Book> searchBookByPrice(int price) {
+	public ArrayList<Book> searchBookByPrice(int price) {  // 3-5. 특정 가격 밑으로 책 찾기
 		
 		ArrayList<Book> searchPrice = new ArrayList<>();
 		for(int i=0; i<bList.size(); i++) {
@@ -124,7 +123,7 @@ public class BookController implements BookManager {
 	}
 
 	@Override
-	public int getTotalPrice() {
+	public int getTotalPrice() {  // 4. 전체책 가격 합계 및 평균 조회
 		int total = 0;
 		for(int i=0; i<bList.size(); i++) {
 			total += bList.get(i).getPrice();
@@ -133,7 +132,7 @@ public class BookController implements BookManager {
 	}
 
 	@Override
-	public int getAvgPrice() {
+	public int getAvgPrice() {  // 4. 전체책 가격 합계 및 평균 조회
 		return getTotalPrice() / bList.size();
 	}
 	

@@ -7,6 +7,7 @@ import com.kh.chap01_list.part02_mvc.model.vo.Music;
 // 사용자의 요청을 처리해주는 클래스!! 출력문 쓰지 않기!! (메소드 모음집)
 public class MusicController {
 
+	// 전역으로 (계속쓰기위해)
 	private ArrayList<Music> list = new ArrayList<>();	// []
 	
 	{//(필드부)
