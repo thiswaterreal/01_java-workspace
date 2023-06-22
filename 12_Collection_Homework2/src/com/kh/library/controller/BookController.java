@@ -20,31 +20,6 @@ public class BookController implements BookManager {
 		return bList;
 	}
 
-	@Override
-	public Book searchBookBybNo(String bNo) {// 3-1. bNo으로 책 찾기
-		
-		Book b = null;
-	
-		for(int i=0; i<bList.size(); i++) {
-			if(bList.get(i).getbNo().equals(bNo)) {
-				b= bList.get(i);		
-			}
-		}
-		return b;
-	}
-
-	@Override
-	public ArrayList<Book> searchBookByTitle(String title) { // 3-2. 책 제목으로 책 찾기
-		
-		ArrayList<Book> searchTitle = new ArrayList<>();
-		
-		for(int i=0; i<bList.size(); i++) {
-			if(bList.get(i).getTitle().contains(title)) {
-				searchTitle.add(bList.get(i));
-			}
-		}
-		return searchTitle;
-	}
 
 	@Override
 	   public ArrayList<Book> onlySearchBook() { // 1-2. 일반도서만 조회하기(잡지 제외)
@@ -71,6 +46,32 @@ public class BookController implements BookManager {
 	         }
 	      }
 	      return tempM;
+	   }
+	   
+	   @Override
+	   public Book searchBookBybNo(String bNo) {// 3-1. bNo으로 책 찾기
+		   
+		   Book b = null;
+		   
+		   for(int i=0; i<bList.size(); i++) {
+			   if(bList.get(i).getbNo().equals(bNo)) {
+				   b= bList.get(i);		
+			   }
+		   }
+		   return b;
+	   }
+	   
+	   @Override
+	   public ArrayList<Book> searchBookByTitle(String title) { // 3-2. 책 제목으로 책 찾기
+		   
+		   ArrayList<Book> searchTitle = new ArrayList<>();
+		   
+		   for(int i=0; i<bList.size(); i++) {
+			   if(bList.get(i).getTitle().contains(title)) {
+				   searchTitle.add(bList.get(i));
+			   }
+		   }
+		   return searchTitle;
 	   }
 
 	@Override
