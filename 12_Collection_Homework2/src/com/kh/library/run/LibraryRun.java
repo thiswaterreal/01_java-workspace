@@ -13,7 +13,7 @@ public class LibraryRun {
 	public static void main(String[] args) { // 소장책 DB
 		
 		ArrayList<Book> bList = new ArrayList<>();	//**
-
+		
 		
 		bList.add(new Book("100", "잃어버린 주원이를 찾아서", "저자 고경원", "상호 출판사", 8500, "『유정스』, 『르 몽드』 선정 20세기 최고의 책"));
 		bList.add(new Book("101", "현우의 자서전", "지완이가 옮김", "빛나는 현수출판사", 8500, "영화배우 민병진이 추천한 젊음에 바치는 영혼의 자서전"));
@@ -32,9 +32,9 @@ public class LibraryRun {
 		// 여기서 메뉴열고 구현 시작
 		BookController bc = new BookController(); //*****
 		
-		for(Book nBook : bs) {
-			System.out.println(nBook);	// 가장처음전체출력
-			bc.addBook(nBook);	// 0. 처음(all추가)
+		for(Book b : bs) {
+			System.out.println(b);	// 가장처음전체출력
+			bc.addBook(b);	// 0. 처음(all추가)
 		}
 		
 		boolean flag = true; // 메뉴 스위치

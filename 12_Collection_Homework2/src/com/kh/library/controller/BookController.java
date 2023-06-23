@@ -8,7 +8,7 @@ import com.kh.library.model.vo.Magazine;
 //BookManager 인터페이스 구현 (메소드 모음집)
 public class BookController implements BookManager {
 
-	ArrayList<Book> bList = new ArrayList<>();	//**
+	ArrayList<Book> bList = new ArrayList<>();	//** list로 바꿔바
 	
 	@Override
 	public void addBook(Book nBook) { // 0. 처음(all추가)
@@ -50,20 +50,21 @@ public class BookController implements BookManager {
 	   
 	   @Override
 	   public Book searchBookBybNo(String bNo) {// 3-1. bNo으로 책 찾기
+		   // 찾으려는건 딱 한권이어야하니까 ArrayList일 필요없음
 		   
-		   Book b = null;
+		   Book b = null;	// 책없으면	// 책있으면
 		   
 		   for(int i=0; i<bList.size(); i++) {
 			   if(bList.get(i).getbNo().equals(bNo)) {
 				   b= bList.get(i);		
 			   }
 		   }
-		   return b;
+		   return b;		// null		// 해당 번호의 책
 	   }
 	   
 	   @Override
 	   public ArrayList<Book> searchBookByTitle(String title) { // 3-2. 책 제목으로 책 찾기
-		   
+		   // 해당 키워드인 책이 여러개일 가능성이 있으니까 ArrayList!
 		   ArrayList<Book> searchTitle = new ArrayList<>();
 		   
 		   for(int i=0; i<bList.size(); i++) {

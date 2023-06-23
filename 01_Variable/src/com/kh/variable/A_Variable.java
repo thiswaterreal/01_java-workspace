@@ -92,7 +92,7 @@ public class A_Variable {
 		byte bNum = 100;    // 1byte (-128 ~ 127)
 		short sNum = 1000;  // 2byte
 		int iNum = 10000;   // 4byte (정수형의 기본 자료형)
-		long lNum = 100000; // 8byte
+		long lNum = 100000L; // 8byte
 		// 2-2. 실수형 (소숫점o)
 		float fNum = 0.0f;     // 4byte (소숫점 7자리까지 표현 가능)
 							   //       float의 경우 double과 값을 구분하기 위해 값 뒤에 'f'를 붙임
